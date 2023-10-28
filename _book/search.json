@@ -1,0 +1,37 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Introduction to Stochastic Processes",
+    "section": "",
+    "text": "Preface\nThis is a Quarto book.\nTo learn more about Quarto books visit https://quarto.org/docs/books."
+  },
+  {
+    "objectID": "intro.html",
+    "href": "intro.html",
+    "title": "1  What is a Stochastic Process?",
+    "section": "",
+    "text": "2 Why stochastic process?"
+  },
+  {
+    "objectID": "intro.html#random-variable",
+    "href": "intro.html#random-variable",
+    "title": "1  What is a Stochastic Process?",
+    "section": "1.1 Random variable",
+    "text": "1.1 Random variable"
+  },
+  {
+    "objectID": "intro.html#stochastic-random-variable",
+    "href": "intro.html#stochastic-random-variable",
+    "title": "1  What is a Stochastic Process?",
+    "section": "1.2 Stochastic random variable",
+    "text": "1.2 Stochastic random variable"
+  },
+  {
+    "objectID": "summary.html",
+    "href": "summary.html",
+    "title": "3  Summary",
+    "section": "",
+    "text": "In summary, this book has no content whatsoever."
+  }
+]

@@ -1,0 +1,26 @@
+project:
+  type: book
+
+book:
+  title: "Introduction to Stochastic Processes"
+  author: "Thiyanga S. Talagala"
+  search: true
+  cover-image: cover.png
+  chapters:
+    - index.qmd
+    - intro.qmd
+    - chapter2.qmd
+    - summary.qmd
+    - references.qmd
+
+bibliography: references.bib
+
+format:
+  html:
+    cover-image: cover.png
+    theme: cosmo
+  pdf:
+    documentclass: scrreprt
+
+
+

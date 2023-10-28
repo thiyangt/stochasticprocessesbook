@@ -1,0 +1,15 @@
+
+
+## What is a Stochastic Process?
+
+First, let's see what does "stochastic" mean?  The meaning of "stochastic" is **random**.  A process can be thought of as a function of time or space. In the study of a stochastic process, we examine a collection of random variables indexed by a certain parameter, typically time, representing the evolution of a system over a series of discrete or continuous instances.
+
+In probability and
+
+## Random variable
+
+## Stochastic random variable
+
+# Why stochastic process?
+
+# Types of Stochastic Processes
