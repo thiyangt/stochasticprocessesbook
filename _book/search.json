@@ -9,23 +9,23 @@
   {
     "objectID": "intro.html",
     "href": "intro.html",
-    "title": "1  What is a Stochastic Process?",
+    "title": "1  Introduction",
     "section": "",
-    "text": "2 Why stochastic process?"
+    "text": "2 Types of Stochastic Processes"
   },
   {
     "objectID": "intro.html#random-variable",
     "href": "intro.html#random-variable",
-    "title": "1  What is a Stochastic Process?",
-    "section": "1.1 Random variable",
-    "text": "1.1 Random variable"
+    "title": "1  Introduction",
+    "section": "1.3 Random variable",
+    "text": "1.3 Random variable"
   },
   {
     "objectID": "intro.html#stochastic-random-variable",
     "href": "intro.html#stochastic-random-variable",
-    "title": "1  What is a Stochastic Process?",
-    "section": "1.2 Stochastic random variable",
-    "text": "1.2 Stochastic random variable"
+    "title": "1  Introduction",
+    "section": "1.4 Stochastic random variable",
+    "text": "1.4 Stochastic random variable"
   },
   {
     "objectID": "summary.html",
@@ -33,5 +33,33 @@
     "title": "3  Summary",
     "section": "",
     "text": "In summary, this book has no content whatsoever."
+  },
+  {
+    "objectID": "intro.html#why-stochastic-process",
+    "href": "intro.html#why-stochastic-process",
+    "title": "1  Introduction",
+    "section": "1.5 Why stochastic process?",
+    "text": "1.5 Why stochastic process?"
+  },
+  {
+    "objectID": "intro.html#applications-of-stochastic-processes",
+    "href": "intro.html#applications-of-stochastic-processes",
+    "title": "1  Introduction",
+    "section": "1.6 Applications of stochastic processes",
+    "text": "1.6 Applications of stochastic processes"
+  },
+  {
+    "objectID": "intro.html#definition-of-a-stochastic-process",
+    "href": "intro.html#definition-of-a-stochastic-process",
+    "title": "1  Introduction",
+    "section": "1.2 Definition of a stochastic process",
+    "text": "1.2 Definition of a stochastic process\nA stochastic process is a collection of random variables \\(\\{X_t, t\\in T\\}\\) or \\({X(t), t \\in T}\\) where \\(T\\) is an index set.That is for each \\(t \\in T\\), the random variable \\(X_t\\) (or \\(X(t)\\)) is a random variable."
+  },
+  {
+    "objectID": "intro.html#what-is-a-stochastic-process",
+    "href": "intro.html#what-is-a-stochastic-process",
+    "title": "1  Introduction",
+    "section": "1.1 What is a Stochastic Process?",
+    "text": "1.1 What is a Stochastic Process?\nFirst, let’s see what does “stochastic” mean? The meaning of “stochastic” is random. The term “process” refers to a mathematical or statistical model that describes the evolution of a random variable over time. In the study of a stochastic process, we examine a collection of random variables indexed by a certain parameter, typically time, representing the evolution of a system over a series of discrete or continuous instances.\nFor example, suppose we monitor the weather condition every hour in a day sunny, rainy, and cloudy. Then you are essentially observing a stochastic process. This process describes how the weather condition evolves over time.\nCan we describe this situation using a single random variable? No, we cannot. We need a sequence of random variables index by time as follows:\n\\(X_0\\) - weather condition from 00:00 to 01:00\n\\(X_1\\) - weather condition from 01:00 to 02:00\n.\n.\n.\n\\(X_{23}\\) - weather condition from 23:00 - 00:00\nThe above scenario can be framed as a stochastic process. Here’s how it relates to the concept of a stochastic process:\nTime index: The time index is the hour of the day as 0, 1, 2, 3, … 23. Each hour is a specific point in time.\nRandom variable: The weather conditions at each hour can be viewed as random variables. These random variables can be take different values such as sunny, rainy and cloudy. The weather conditions sunny,rainy and cloudy are called states (see Section for more information).\nIn many real life situations, observations are made over a period of time. Stochastic processes are used to model and analyze such time-dependent random phenomena, allowing you to study the probabilistic behavior and make predictions about future states based on past observations. When dealing with stochastic processes, we can address various probabilistic questions, including but not limited to:\n\nConditional probabilities: For instance, given that the weather has been cloudy for the first five hours of the day, you can use the stochastic process to estimate the likelihood of it remaining cloudy or changing to a different condition in the next hour.\nTime to an event:  For example, you can estimate how long it will take for the weather to change from cloudy to sunny.\nTransition probabilities:  For instance, you can determine the likelihood of going from a rainy day to a sunny day or vice versa.\nFrequency of Events: You can examine the frequency of specific events occurring within a given time frame.\n\nThese are just a few examples of the probabilistic questions that can be addressed using stochastic processes. The specific questions you can answer will depend on the nature of the process and the data available for analysis."
   }
 ]

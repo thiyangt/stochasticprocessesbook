@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Introduction to Stochastic Processes - 1&nbsp; What is a Stochastic Process?</title>
+<title>Introduction to Stochastic Processes - 1&nbsp; Introduction</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -61,6 +61,7 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 </head>
 
@@ -70,7 +71,7 @@ ul.task-list li input[type="checkbox"] {
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">What is a Stochastic Process?</span></h1>
+      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -100,7 +101,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./intro.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">What is a Stochastic Process?</span></a>
+  <a href="./intro.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -127,10 +128,13 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#random-variable" id="toc-random-variable" class="nav-link active" data-scroll-target="#random-variable"><span class="toc-section-number">1.1</span>  Random variable</a></li>
-  <li><a href="#stochastic-random-variable" id="toc-stochastic-random-variable" class="nav-link" data-scroll-target="#stochastic-random-variable"><span class="toc-section-number">1.2</span>  Stochastic random variable</a></li>
-  <li><a href="#why-stochastic-process" id="toc-why-stochastic-process" class="nav-link" data-scroll-target="#why-stochastic-process"><span class="toc-section-number">2</span>  Why stochastic process?</a></li>
-  <li><a href="#types-of-stochastic-processes" id="toc-types-of-stochastic-processes" class="nav-link" data-scroll-target="#types-of-stochastic-processes"><span class="toc-section-number">3</span>  Types of Stochastic Processes</a></li>
+  <li><a href="#what-is-a-stochastic-process" id="toc-what-is-a-stochastic-process" class="nav-link active" data-scroll-target="#what-is-a-stochastic-process"><span class="toc-section-number">1.1</span>  What is a Stochastic Process?</a></li>
+  <li><a href="#definition-of-a-stochastic-process" id="toc-definition-of-a-stochastic-process" class="nav-link" data-scroll-target="#definition-of-a-stochastic-process"><span class="toc-section-number">1.2</span>  Definition of a stochastic process</a></li>
+  <li><a href="#random-variable" id="toc-random-variable" class="nav-link" data-scroll-target="#random-variable"><span class="toc-section-number">1.3</span>  Random variable</a></li>
+  <li><a href="#stochastic-random-variable" id="toc-stochastic-random-variable" class="nav-link" data-scroll-target="#stochastic-random-variable"><span class="toc-section-number">1.4</span>  Stochastic random variable</a></li>
+  <li><a href="#why-stochastic-process" id="toc-why-stochastic-process" class="nav-link" data-scroll-target="#why-stochastic-process"><span class="toc-section-number">1.5</span>  Why stochastic process?</a></li>
+  <li><a href="#applications-of-stochastic-processes" id="toc-applications-of-stochastic-processes" class="nav-link" data-scroll-target="#applications-of-stochastic-processes"><span class="toc-section-number">1.6</span>  Applications of stochastic processes</a></li>
+  <li><a href="#types-of-stochastic-processes" id="toc-types-of-stochastic-processes" class="nav-link" data-scroll-target="#types-of-stochastic-processes"><span class="toc-section-number">2</span>  Types of Stochastic Processes</a></li>
   </ul>
 </nav>
     </div>
@@ -139,7 +143,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">What is a Stochastic Process?</span></h1>
+<h1 class="title d-none d-lg-block"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></h1>
 </div>
 
 
@@ -154,19 +158,47 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<p>First, let’s see what does “stochastic” mean? The meaning of “stochastic” is <strong>random</strong>. A process can be thought of as a function of time or space. In the study of a stochastic process, we examine a collection of random variables indexed by a certain parameter, typically time, representing the evolution of a system over a series of discrete or continuous instances.</p>
-<p>In probability and</p>
-<section id="random-variable" class="level2" data-number="1.1">
-<h2 data-number="1.1" class="anchored" data-anchor-id="random-variable"><span class="header-section-number">1.1</span> Random variable</h2>
+<section id="what-is-a-stochastic-process" class="level2" data-number="1.1">
+<h2 data-number="1.1" class="anchored" data-anchor-id="what-is-a-stochastic-process"><span class="header-section-number">1.1</span> What is a Stochastic Process?</h2>
+<p>First, let’s see what does “stochastic” mean? The meaning of “stochastic” is <strong>random</strong>. The term “process” refers to a mathematical or statistical model that describes the evolution of a random variable over time. In the study of a stochastic process, we examine a collection of random variables indexed by a certain parameter, typically time, representing the evolution of a system over a series of discrete or continuous instances.</p>
+<p>For example, suppose we monitor the weather condition every hour in a day sunny, rainy, and cloudy. Then you are essentially observing a stochastic process. This process describes how the weather condition evolves over time.</p>
+<p>Can we describe this situation using a single random variable? No, we cannot. We need a sequence of random variables index by time as follows:</p>
+<p><span class="math inline">\(X_0\)</span> - weather condition from 00:00 to 01:00</p>
+<p><span class="math inline">\(X_1\)</span> - weather condition from 01:00 to 02:00</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p><span class="math inline">\(X_{23}\)</span> - weather condition from 23:00 - 00:00</p>
+<p>The above scenario can be framed as a stochastic process. Here’s how it relates to the concept of a stochastic process:</p>
+<p><strong>Time index:</strong> The time index is the hour of the day as 0, 1, 2, 3, … 23. Each hour is a specific point in time.</p>
+<p><strong>Random variable:</strong> The weather conditions at each hour can be viewed as random variables. These random variables can be take different values such as sunny, rainy and cloudy. The weather conditions sunny,rainy and cloudy are called <em>states</em> (see Section for more information).</p>
+<p>In many real life situations, observations are made over a period of time. Stochastic processes are used to model and analyze such time-dependent random phenomena, allowing you to study the probabilistic behavior and make predictions about future states based on past observations. When dealing with stochastic processes, we can address various probabilistic questions, including but not limited to:</p>
+<ol type="1">
+<li><p><strong>Conditional probabilities: </strong>For instance, given that the weather has been cloudy for the first five hours of the day, you can use the stochastic process to estimate the likelihood of it remaining cloudy or changing to a different condition in the next hour.</p></li>
+<li><p><strong>Time to an event: </strong> For example, you can estimate how long it will take for the weather to change from cloudy to sunny.</p></li>
+<li><p><strong>Transition probabilities: </strong> For instance, you can determine the likelihood of going from a rainy day to a sunny day or vice versa.</p></li>
+<li><p><strong>Frequency of Events:</strong> You can examine the frequency of specific events occurring within a given time frame.</p></li>
+</ol>
+<p>These are just a few examples of the probabilistic questions that can be addressed using stochastic processes. The specific questions you can answer will depend on the nature of the process and the data available for analysis.</p>
 </section>
-<section id="stochastic-random-variable" class="level2" data-number="1.2">
-<h2 data-number="1.2" class="anchored" data-anchor-id="stochastic-random-variable"><span class="header-section-number">1.2</span> Stochastic random variable</h2>
+<section id="definition-of-a-stochastic-process" class="level2" data-number="1.2">
+<h2 data-number="1.2" class="anchored" data-anchor-id="definition-of-a-stochastic-process"><span class="header-section-number">1.2</span> Definition of a stochastic process</h2>
+<p>A stochastic process is a collection of random variables <span class="math inline">\(\{X_t, t\in T\}\)</span> or <span class="math inline">\({X(t), t \in T}\)</span> where <span class="math inline">\(T\)</span> is an index set.That is for each <span class="math inline">\(t \in T\)</span>, the random variable <span class="math inline">\(X_t\)</span> (or <span class="math inline">\(X(t)\)</span>) is a random variable.</p>
 </section>
-<section id="why-stochastic-process" class="level1" data-number="2">
-<h1 data-number="2"><span class="header-section-number">2</span> Why stochastic process?</h1>
+<section id="random-variable" class="level2" data-number="1.3">
+<h2 data-number="1.3" class="anchored" data-anchor-id="random-variable"><span class="header-section-number">1.3</span> Random variable</h2>
 </section>
-<section id="types-of-stochastic-processes" class="level1" data-number="3">
-<h1 data-number="3"><span class="header-section-number">3</span> Types of Stochastic Processes</h1>
+<section id="stochastic-random-variable" class="level2" data-number="1.4">
+<h2 data-number="1.4" class="anchored" data-anchor-id="stochastic-random-variable"><span class="header-section-number">1.4</span> Stochastic random variable</h2>
+</section>
+<section id="why-stochastic-process" class="level2" data-number="1.5">
+<h2 data-number="1.5" class="anchored" data-anchor-id="why-stochastic-process"><span class="header-section-number">1.5</span> Why stochastic process?</h2>
+</section>
+<section id="applications-of-stochastic-processes" class="level2" data-number="1.6">
+<h2 data-number="1.6" class="anchored" data-anchor-id="applications-of-stochastic-processes"><span class="header-section-number">1.6</span> Applications of stochastic processes</h2>
+</section>
+<section id="types-of-stochastic-processes" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> Types of Stochastic Processes</h1>
 
 
 </section>
