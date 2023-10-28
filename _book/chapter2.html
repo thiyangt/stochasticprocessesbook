@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Introduction to Stochastic Processes - 2&nbsp; Notations and Terminologies</title>
+<title>Introduction to Stochastic Processes - 2&nbsp; Discrete Parameter Markov Chains</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -70,7 +70,7 @@ ul.task-list li input[type="checkbox"] {
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Notations and Terminologies</span></h1>
+      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Discrete Parameter Markov Chains</span></h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -100,12 +100,12 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./intro.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">What is a Stochastic Process?</span></a>
+  <a href="./intro.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./chapter2.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Notations and Terminologies</span></a>
+  <a href="./chapter2.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Discrete Parameter Markov Chains</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -123,14 +123,27 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction"><span class="toc-section-number">2.1</span>  Introduction</a></li>
+  <li><a href="#one-step-transition-probabilities" id="toc-one-step-transition-probabilities" class="nav-link" data-scroll-target="#one-step-transition-probabilities"><span class="toc-section-number">2.2</span>  One-step transition probabilities</a></li>
+  <li><a href="#one-step-transition-probabilities-1" id="toc-one-step-transition-probabilities-1" class="nav-link" data-scroll-target="#one-step-transition-probabilities-1"><span class="toc-section-number">2.3</span>  One-step transition probabilities</a></li>
+  <li><a href="#chapman-kolmogorov-equations" id="toc-chapman-kolmogorov-equations" class="nav-link" data-scroll-target="#chapman-kolmogorov-equations"><span class="toc-section-number">2.4</span>  Chapman-Kolmogorov equations</a></li>
+  <li><a href="#higher-n-step-transition-probabilities" id="toc-higher-n-step-transition-probabilities" class="nav-link" data-scroll-target="#higher-n-step-transition-probabilities"><span class="toc-section-number">2.5</span>  Higher (n-step) transition probabilities</a></li>
+  <li><a href="#classification-of-states" id="toc-classification-of-states" class="nav-link" data-scroll-target="#classification-of-states"><span class="toc-section-number">2.6</span>  Classification of states</a></li>
+  <li><a href="#limiting-probabilities" id="toc-limiting-probabilities" class="nav-link" data-scroll-target="#limiting-probabilities"><span class="toc-section-number">2.7</span>  Limiting probabilities</a></li>
+  <li><a href="#applications" id="toc-applications" class="nav-link" data-scroll-target="#applications"><span class="toc-section-number">2.8</span>  Applications</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Notations and Terminologies</span></h1>
+<h1 class="title d-none d-lg-block"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Discrete Parameter Markov Chains</span></h1>
 </div>
 
 
@@ -145,8 +158,32 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
+<section id="introduction" class="level2" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="introduction"><span class="header-section-number">2.1</span> Introduction</h2>
+</section>
+<section id="one-step-transition-probabilities" class="level2" data-number="2.2">
+<h2 data-number="2.2" class="anchored" data-anchor-id="one-step-transition-probabilities"><span class="header-section-number">2.2</span> One-step transition probabilities</h2>
+</section>
+<section id="one-step-transition-probabilities-1" class="level2" data-number="2.3">
+<h2 data-number="2.3" class="anchored" data-anchor-id="one-step-transition-probabilities-1"><span class="header-section-number">2.3</span> One-step transition probabilities</h2>
+</section>
+<section id="chapman-kolmogorov-equations" class="level2" data-number="2.4">
+<h2 data-number="2.4" class="anchored" data-anchor-id="chapman-kolmogorov-equations"><span class="header-section-number">2.4</span> Chapman-Kolmogorov equations</h2>
+</section>
+<section id="higher-n-step-transition-probabilities" class="level2" data-number="2.5">
+<h2 data-number="2.5" class="anchored" data-anchor-id="higher-n-step-transition-probabilities"><span class="header-section-number">2.5</span> Higher (n-step) transition probabilities</h2>
+</section>
+<section id="classification-of-states" class="level2" data-number="2.6">
+<h2 data-number="2.6" class="anchored" data-anchor-id="classification-of-states"><span class="header-section-number">2.6</span> Classification of states</h2>
+</section>
+<section id="limiting-probabilities" class="level2" data-number="2.7">
+<h2 data-number="2.7" class="anchored" data-anchor-id="limiting-probabilities"><span class="header-section-number">2.7</span> Limiting probabilities</h2>
+</section>
+<section id="applications" class="level2" data-number="2.8">
+<h2 data-number="2.8" class="anchored" data-anchor-id="applications"><span class="header-section-number">2.8</span> Applications</h2>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -285,7 +322,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
       <a href="./intro.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">What is a Stochastic Process?</span></span>
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">

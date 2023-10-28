@@ -84,7 +84,47 @@ Now we are ready to look at the mathematical definition of random variable vs st
 
 Depending on the parameter space and state space we can define four type of stochastic processes.
 
-## Why stochastic process?
+**1. Discrete-Parameter Discrete-State Space Stochastic Processes:**
+
+  - Parameter Space: Discrete
+ 
+  - State Space: Discrete
+
+  - Examples: 
+  
+**2. Continuous-Parameter Discrete-State Space Stochastic Processes:**
+
+  - Parameter Space: Continuous
+ 
+  - State Space: Discrete
+
+  - Examples: 
+
+**3. Discrete-Parameter Continous-State Space Stochastic Processes:**
+
+  - Parameter Space: Discrete
+ 
+  - State Space: Continuous
+
+  - Examples: 
+
+**4. Continuous-Parameter Continuous-State Space Stochastic Processes:**
+
+  - Parameter Space: Continuous
+ 
+  - State Space: Continuous
+
+  - Examples: 
+
+## Stochastic process vs a deterministic process   
+  
+## Stochastic proceses vs Time series
+
+Realization
+
+multiple realizations of a stochastic process.
+
+## Stochastic processes vs probaility calculation in a single random variable
 
 ## Applications of stochastic processes
 

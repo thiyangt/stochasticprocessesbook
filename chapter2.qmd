@@ -1,1 +1,17 @@
-# Notations and Terminologies
+# Discrete Parameter Markov Chains
+
+## Introduction
+
+## One-step transition probabilities
+
+## One-step transition probabilities
+
+## Chapman-Kolmogorov equations
+
+## Higher (n-step) transition probabilities
+
+## Classification of states
+
+## Limiting probabilities
+
+## Applications

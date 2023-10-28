@@ -45,8 +45,8 @@
     "objectID": "intro.html#applications-of-stochastic-processes",
     "href": "intro.html#applications-of-stochastic-processes",
     "title": "1  Introduction",
-    "section": "1.9 Applications of stochastic processes",
-    "text": "1.9 Applications of stochastic processes"
+    "section": "1.11 Applications of stochastic processes",
+    "text": "1.11 Applications of stochastic processes"
   },
   {
     "objectID": "intro.html#definition-of-a-stochastic-process",
@@ -95,6 +95,97 @@
     "href": "intro.html#types-of-stochastic-processes",
     "title": "1  Introduction",
     "section": "1.7 Types of Stochastic Processes",
-    "text": "1.7 Types of Stochastic Processes\nDepending on the parameter space and state space we can define four type of stochastic processes."
+    "text": "1.7 Types of Stochastic Processes\nDepending on the parameter space and state space we can define four type of stochastic processes.\n1. Discrete-Parameter Discrete-State Space Stochastic Processes:\n\nParameter Space: Discrete\nState Space: Discrete\nExamples:\n\n2. Continuous-Parameter Discrete-State Space Stochastic Processes:\n\nParameter Space: Continuous\nState Space: Discrete\nExamples:\n\n3. Discrete-Parameter Continous-State Space Stochastic Processes:\n\nParameter Space: Discrete\nState Space: Continuous\nExamples:\n\n4. Continuous-Parameter Continuous-State Space Stochastic Processes:\n\nParameter Space: Continuous\nState Space: Continuous\nExamples:"
+  },
+  {
+    "objectID": "intro.html#stochastic-proceses-vs-time-series",
+    "href": "intro.html#stochastic-proceses-vs-time-series",
+    "title": "1  Introduction",
+    "section": "1.9 Stochastic proceses vs Time series",
+    "text": "1.9 Stochastic proceses vs Time series\nRealization\nmultiple realizations of a stochastic process."
+  },
+  {
+    "objectID": "intro.html#stochastic-processes-vs-probaility-calculation-in-a-single-random-variable",
+    "href": "intro.html#stochastic-processes-vs-probaility-calculation-in-a-single-random-variable",
+    "title": "1  Introduction",
+    "section": "1.10 Stochastic processes vs probaility calculation in a single random variable",
+    "text": "1.10 Stochastic processes vs probaility calculation in a single random variable"
+  },
+  {
+    "objectID": "intro.html#stochastic-process-vs-a-deterministic-process",
+    "href": "intro.html#stochastic-process-vs-a-deterministic-process",
+    "title": "1  Introduction",
+    "section": "1.8 Stochastic process vs a deterministic process",
+    "text": "1.8 Stochastic process vs a deterministic process"
+  },
+  {
+    "objectID": "chapter2.html#introduction",
+    "href": "chapter2.html#introduction",
+    "title": "2  Discrete Parameter Markov Chains",
+    "section": "2.1 Introduction",
+    "text": "2.1 Introduction"
+  },
+  {
+    "objectID": "chapter2.html#one-step-transition-probabilities",
+    "href": "chapter2.html#one-step-transition-probabilities",
+    "title": "2  Discrete Parameter Markov Chains",
+    "section": "2.2 One-step transition probabilities",
+    "text": "2.2 One-step transition probabilities"
+  },
+  {
+    "objectID": "chapter2.html#estimating-transition-probabilities",
+    "href": "chapter2.html#estimating-transition-probabilities",
+    "title": "2  Discrete Parameter Markov Chains",
+    "section": "2.3 Estimating transition probabilities",
+    "text": "2.3 Estimating transition probabilities"
+  },
+  {
+    "objectID": "chapter2.html#chapman-kolmogorov-equations",
+    "href": "chapter2.html#chapman-kolmogorov-equations",
+    "title": "2  Discrete Parameter Markov Chains",
+    "section": "2.4 Chapman-Kolmogorov equations",
+    "text": "2.4 Chapman-Kolmogorov equations"
+  },
+  {
+    "objectID": "chapter2.html#higher-transition-probabilities",
+    "href": "chapter2.html#higher-transition-probabilities",
+    "title": "2  Discrete Parameter Markov Chains",
+    "section": "2.5 Higher transition probabilities",
+    "text": "2.5 Higher transition probabilities"
+  },
+  {
+    "objectID": "chapter2.html#classification-of-states",
+    "href": "chapter2.html#classification-of-states",
+    "title": "2  Discrete Parameter Markov Chains",
+    "section": "2.6 Classification of states",
+    "text": "2.6 Classification of states"
+  },
+  {
+    "objectID": "chapter2.html#limiting-probabilities",
+    "href": "chapter2.html#limiting-probabilities",
+    "title": "2  Discrete Parameter Markov Chains",
+    "section": "2.7 Limiting probabilities",
+    "text": "2.7 Limiting probabilities"
+  },
+  {
+    "objectID": "chapter2.html#applications",
+    "href": "chapter2.html#applications",
+    "title": "2  Discrete Parameter Markov Chains",
+    "section": "2.8 Applications",
+    "text": "2.8 Applications"
+  },
+  {
+    "objectID": "chapter2.html#one-step-transition-probabilities-1",
+    "href": "chapter2.html#one-step-transition-probabilities-1",
+    "title": "2  Discrete Parameter Markov Chains",
+    "section": "2.3 One-step transition probabilities",
+    "text": "2.3 One-step transition probabilities"
+  },
+  {
+    "objectID": "chapter2.html#higher-n-step-transition-probabilities",
+    "href": "chapter2.html#higher-n-step-transition-probabilities",
+    "title": "2  Discrete Parameter Markov Chains",
+    "section": "2.5 Higher (n-step) transition probabilities",
+    "text": "2.5 Higher (n-step) transition probabilities"
   }
 ]
