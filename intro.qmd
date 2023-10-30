@@ -49,11 +49,11 @@ These are just a few examples of the probabilistic questions that can be address
 
 A stochastic process is a collection of random variables $\{X_t, t\in T\}$ or ${X(t), t \in T}$ where $T$ is an index set.That is for each $t \in T$, the random variable $X_t$ (or $X(t)$) is a random variable.
 
-### Parameter space
+## Parameter space
 
 In definition 1, the index set $T$ is called the parameter space. It is usually interpreted as a time variable,telling us when the process is measured. The parameter space can be discrete or continuous. 
 
-## Discrete-parameter process
+### Discrete-parameter process
 
 When $T$ is a countable set, the process is said to be a discrete-parameter process. A discrete-parameter stochastic process is defined as follows:
 
@@ -62,7 +62,7 @@ $$\{X_t: t \in T\}$$
 
 In this scenario, you are interested in the number of customers arriving during each discrete time interval, typically on an hourly basis. 
 
-## Continuous-parameter space
+### Continuous-parameter space
 
 When $T$ is an interval of the real line, the process is said to be a continuous-parameter process. A continuous-parameter stochastic process is defined as follows:
 
@@ -76,9 +76,32 @@ In this scenario, you are interested in the total number of customers arriving o
 
 The set of possible values of an individual random variable $X_t$ or $X(t)$ of a stochastic process is called the state space. The state space can be discrete or continuous.
 
-## Random variable vs stochastic random variable
+## Random Variable in Probability Theory vs Stochastic Theory
 
-Now we are ready to look at the mathematical definition of random variable vs stochastic random variable.
+### Probability theory
+
+<!--All very important.-->
+
+Let $(\Omega, \mathscr{F}, \mathbb{P})$ be a probability space. A measurable mapping $X: \Omega \rightarrow \mathbb{R}$ is called a random variable. The $X(\omega)$ for $\omega \in \Omega$ iscalled a realization of $X$.
+
+**Example:**
+
+
+### Stochastic theory
+
+Suppose that $(\Omega, \mathscr{F}, \mathbb{P})$ is a probability space, the function $X: T \times \Omega \rightarrow \mathbb{R}$ .
+
+- We will always assume that the cardinality of $T$ is infinite, either countable or
+uncountable.
+
+If $T=\mathbb{Z}^+$ then we called X a discrete time stochastic process.
+
+If $I = [0,\infty)$,
+then $X$ is said to be a continuous time stochastic processes.
+
+## Sample path (trajectory) of a stochastic process
+  
+**Example:**
 
 ## Types of Stochastic Processes
 
@@ -90,7 +113,7 @@ Depending on the parameter space and state space we can define four type of stoc
  
   - State Space: Discrete
 
-  - Examples: 
+  - Examples: Assessment of crop condition during routine field inspections in agriculture is categorized as: healthy, pest-infested, diseased, damaged. These field inspections are typically conducted at regular intervals, such as once a week
   
 **2. Continuous-Parameter Discrete-State Space Stochastic Processes:**
 
@@ -115,9 +138,15 @@ Depending on the parameter space and state space we can define four type of stoc
   - State Space: Continuous
 
   - Examples: 
+  
+## Stationary condition of a stochastic process
+
+## Independent increments condition of a stochastic process
+
+## Stationary increments condition of a stochastic process
 
 ## Stochastic process vs a deterministic process   
-  
+
 ## Stochastic proceses vs Time series
 
 Realization
