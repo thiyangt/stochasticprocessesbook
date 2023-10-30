@@ -21,18 +21,11 @@
     "text": "1.2 Definition of a stochastic process\nDefinition 1\nA stochastic process is a collection of random variables \\(\\{X_t, t\\in T\\}\\) or \\({X(t), t \\in T}\\) where \\(T\\) is an index set.That is for each \\(t \\in T\\), the random variable \\(X_t\\) (or \\(X(t)\\)) is a random variable."
   },
   {
-    "objectID": "intro.html#discrete-parameter-process",
-    "href": "intro.html#discrete-parameter-process",
+    "objectID": "intro.html#parameter-space",
+    "href": "intro.html#parameter-space",
     "title": "1  Introduction",
-    "section": "1.3 Discrete-parameter process",
-    "text": "1.3 Discrete-parameter process\nWhen \\(T\\) is a countable set, the process is said to be a discrete-parameter process. A discrete-parameter stochastic process is defined as follows:\n\\[\\{X_t: t \\in T\\}\\] Example: Number of Customers Arriving Each Hour to a particular super market (Discrete Parameter Space)\nIn this scenario, you are interested in the number of customers arriving during each discrete time interval, typically on an hourly basis."
-  },
-  {
-    "objectID": "intro.html#continuous-parameter-space",
-    "href": "intro.html#continuous-parameter-space",
-    "title": "1  Introduction",
-    "section": "1.4 Continuous-parameter space",
-    "text": "1.4 Continuous-parameter space\nWhen \\(T\\) is an interval of the real line, the process is said to be a continuous-parameter process. A continuous-parameter stochastic process is defined as follows:\n\\[\\{X(t): t \\in T\\}\\]\nExample 1: Number of Customers Arriving from 8 AM to 10 PM (Continuous Parameter Space):\nIn this scenario, you are interested in the total number of customers arriving over a continuous time period, specifically from 8 AM to 10 PM."
+    "section": "1.3 Parameter space",
+    "text": "1.3 Parameter space\nIn definition 1, the index set \\(T\\) is called the parameter space. It is usually interpreted as a time variable,telling us when the process is measured. The parameter space can be discrete or continuous.\n\n1.3.1 Discrete-parameter process\nWhen \\(T\\) is a countable set, the process is said to be a discrete-parameter process. A discrete-parameter stochastic process is defined as follows:\n\\[\\{X_t: t \\in T\\}\\] Example: Number of Customers Arriving Each Hour to a particular super market (Discrete Parameter Space)\nIn this scenario, you are interested in the number of customers arriving during each discrete time interval, typically on an hourly basis.\n\n\n1.3.2 Continuous-parameter space\nWhen \\(T\\) is an interval of the real line, the process is said to be a continuous-parameter process. A continuous-parameter stochastic process is defined as follows:\n\\[\\{X(t): t \\in T\\}\\]\nExample 1: Number of Customers Arriving from 8 AM to 10 PM (Continuous Parameter Space):\nIn this scenario, you are interested in the total number of customers arriving over a continuous time period, specifically from 8 AM to 10 PM."
   },
   {
     "objectID": "intro.html#state-space",
@@ -42,11 +35,18 @@
     "text": "1.4 State space\nThe set of possible values of an individual random variable \\(X_t\\) or \\(X(t)\\) of a stochastic process is called the state space. The state space can be discrete or continuous."
   },
   {
-    "objectID": "intro.html#random-variable-vs-stochastic-random-variable",
-    "href": "intro.html#random-variable-vs-stochastic-random-variable",
+    "objectID": "intro.html#random-variable-in-probability-theory-vs-stochastic-theory",
+    "href": "intro.html#random-variable-in-probability-theory-vs-stochastic-theory",
     "title": "1  Introduction",
-    "section": "1.6 Random variable vs stochastic random variable",
-    "text": "1.6 Random variable vs stochastic random variable\nNow we are ready to look at the mathematical definition of random variable vs stochastic random variable."
+    "section": "1.5 Random Variable in Probability Theory vs Stochastic Theory",
+    "text": "1.5 Random Variable in Probability Theory vs Stochastic Theory\n\n1.5.1 Probability theory\n\nLet \\((\\Omega, \\mathscr{F}, \\mathbb{P})\\) be a probability space. A measurable mapping \\(X: \\Omega \\rightarrow \\mathbb{R}\\) is called a random variable. The \\(X(\\omega)\\) for \\(\\omega \\in \\Omega\\) iscalled a realization of \\(X\\).\nExample:\n\n\n1.5.2 Stochastic theory\nSuppose that \\((\\Omega, \\mathscr{F}, \\mathbb{P})\\) is a probability space, the function \\(X: T \\times \\Omega \\rightarrow \\mathbb{R}\\) .\n\nWe will always assume that the cardinality of \\(T\\) is infinite, either countable or uncountable.\n\nIf \\(T=\\mathbb{Z}^+\\) then we called X a discrete time stochastic process.\nIf \\(I = [0,\\infty)\\), then \\(X\\) is said to be a continuous time stochastic processes."
+  },
+  {
+    "objectID": "intro.html#sample-path-trajectory-of-a-stochastic-process",
+    "href": "intro.html#sample-path-trajectory-of-a-stochastic-process",
+    "title": "1  Introduction",
+    "section": "1.6 Sample path (trajectory) of a stochastic process",
+    "text": "1.6 Sample path (trajectory) of a stochastic process\nThe function \\(t \\rightarrow X_t(\\omega)\\) (\\(t \\rightarrow X(t)(\\omega)\\)) is called a sample path of the stochastic process. For each\nExample:"
   },
   {
     "objectID": "intro.html#types-of-stochastic-processes",
@@ -54,6 +54,27 @@
     "title": "1  Introduction",
     "section": "1.7 Types of Stochastic Processes",
     "text": "1.7 Types of Stochastic Processes\nDepending on the parameter space and state space we can define four type of stochastic processes.\n1. Discrete-Parameter Discrete-State Space Stochastic Processes:\n\nParameter Space: Discrete\nState Space: Discrete\nExamples: Assessment of crop condition during routine field inspections in agriculture is categorized as: healthy, pest-infested, diseased, damaged. These field inspections are typically conducted at regular intervals, such as once a week\n\n2. Continuous-Parameter Discrete-State Space Stochastic Processes:\n\nParameter Space: Continuous\nState Space: Discrete\nExamples:\n\n3. Discrete-Parameter Continous-State Space Stochastic Processes:\n\nParameter Space: Discrete\nState Space: Continuous\nExamples:\n\n4. Continuous-Parameter Continuous-State Space Stochastic Processes:\n\nParameter Space: Continuous\nState Space: Continuous\nExamples:"
+  },
+  {
+    "objectID": "intro.html#stationary-condition-of-a-stochastic-process",
+    "href": "intro.html#stationary-condition-of-a-stochastic-process",
+    "title": "1  Introduction",
+    "section": "1.8 Stationary condition of a stochastic process",
+    "text": "1.8 Stationary condition of a stochastic process"
+  },
+  {
+    "objectID": "intro.html#independent-increments-condition-of-a-stochastic-process",
+    "href": "intro.html#independent-increments-condition-of-a-stochastic-process",
+    "title": "1  Introduction",
+    "section": "1.9 Independent increments condition of a stochastic process",
+    "text": "1.9 Independent increments condition of a stochastic process"
+  },
+  {
+    "objectID": "intro.html#stationary-increments-condition-of-a-stochastic-process",
+    "href": "intro.html#stationary-increments-condition-of-a-stochastic-process",
+    "title": "1  Introduction",
+    "section": "1.10 Stationary increments condition of a stochastic process",
+    "text": "1.10 Stationary increments condition of a stochastic process"
   },
   {
     "objectID": "intro.html#stochastic-process-vs-a-deterministic-process",
@@ -145,54 +166,5 @@
     "title": "3  Summary",
     "section": "",
     "text": "In summary, this book has no content whatsoever."
-  },
-  {
-    "objectID": "intro.html#random-variable-in-probability-theory-vs-stochastic-theory",
-    "href": "intro.html#random-variable-in-probability-theory-vs-stochastic-theory",
-    "title": "1  Introduction",
-    "section": "1.5 Random Variable in Probability Theory vs Stochastic Theory",
-    "text": "1.5 Random Variable in Probability Theory vs Stochastic Theory\n\n1.5.1 Probability theory\n\nLet \\((\\Omega, \\mathscr{F}, \\mathbb{P})\\) be a probability space. A measurable mapping \\(X: \\Omega \\rightarrow \\mathbb{R}\\) is called a random variable. The \\(X(\\omega)\\) for \\(\\omega \\in \\Omega\\) iscalled a realization of \\(X\\).\nExample:\n\n\n1.5.2 Stochastic theory\nSuppose that \\((\\Omega, \\mathscr{F}, \\mathbb{P})\\) is a probability space, the function \\(X: T \\times \\Omega \\rightarrow \\mathbb{R}\\) .\n\nWe will always assume that the cardinality of \\(T\\) is infinite, either countable or uncountable.\n\nIf \\(T=\\mathbb{Z}^+\\) then we called X a discrete time stochastic process.\nIf \\(I = [0,\\infty)\\), then \\(X\\) is said to be a continuous time stochastic processes."
-  },
-  {
-    "objectID": "intro.html#parameter-space",
-    "href": "intro.html#parameter-space",
-    "title": "1  Introduction",
-    "section": "1.3 Parameter space",
-    "text": "1.3 Parameter space\nIn definition 1, the index set \\(T\\) is called the parameter space. It is usually interpreted as a time variable,telling us when the process is measured. The parameter space can be discrete or continuous.\n\n1.3.1 Discrete-parameter process\nWhen \\(T\\) is a countable set, the process is said to be a discrete-parameter process. A discrete-parameter stochastic process is defined as follows:\n\\[\\{X_t: t \\in T\\}\\] Example: Number of Customers Arriving Each Hour to a particular super market (Discrete Parameter Space)\nIn this scenario, you are interested in the number of customers arriving during each discrete time interval, typically on an hourly basis.\n\n\n1.3.2 Continuous-parameter space\nWhen \\(T\\) is an interval of the real line, the process is said to be a continuous-parameter process. A continuous-parameter stochastic process is defined as follows:\n\\[\\{X(t): t \\in T\\}\\]\nExample 1: Number of Customers Arriving from 8 AM to 10 PM (Continuous Parameter Space):\nIn this scenario, you are interested in the total number of customers arriving over a continuous time period, specifically from 8 AM to 10 PM."
-  },
-  {
-    "objectID": "intro.html#sample-path-of-a-stochastic-process",
-    "href": "intro.html#sample-path-of-a-stochastic-process",
-    "title": "1  Introduction",
-    "section": "1.6 Sample path of a stochastic process",
-    "text": "1.6 Sample path of a stochastic process\nExample:"
-  },
-  {
-    "objectID": "intro.html#sample-path-trajectory-of-a-stochastic-process",
-    "href": "intro.html#sample-path-trajectory-of-a-stochastic-process",
-    "title": "1  Introduction",
-    "section": "1.6 Sample path (trajectory) of a stochastic process",
-    "text": "1.6 Sample path (trajectory) of a stochastic process\nThe function \\(t \\rightarrow X_t(\\omega)\\) (\\(t \\rightarrow X(t)(\\omega)\\)) is called a sample path of the stochastic process. For each\nExample:"
-  },
-  {
-    "objectID": "intro.html#stationary-condition-of-a-stochastic-process",
-    "href": "intro.html#stationary-condition-of-a-stochastic-process",
-    "title": "1  Introduction",
-    "section": "1.8 Stationary condition of a stochastic process",
-    "text": "1.8 Stationary condition of a stochastic process"
-  },
-  {
-    "objectID": "intro.html#independent-increments-condition-of-a-stochastic-process",
-    "href": "intro.html#independent-increments-condition-of-a-stochastic-process",
-    "title": "1  Introduction",
-    "section": "1.9 Independent increments condition of a stochastic process",
-    "text": "1.9 Independent increments condition of a stochastic process"
-  },
-  {
-    "objectID": "intro.html#stationary-increments-condition-of-a-stochastic-process",
-    "href": "intro.html#stationary-increments-condition-of-a-stochastic-process",
-    "title": "1  Introduction",
-    "section": "1.10 Stationary increments condition of a stochastic process",
-    "text": "1.10 Stationary increments condition of a stochastic process"
   }
 ]

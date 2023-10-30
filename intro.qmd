@@ -100,6 +100,8 @@ If $I = [0,\infty)$,
 then $X$ is said to be a continuous time stochastic processes.
 
 ## Sample path (trajectory) of a stochastic process
+
+The function $t \rightarrow X_t(\omega)$ ($t \rightarrow X(t)(\omega)$) is called a sample path of the stochastic process. For each 
   
 **Example:**
 
@@ -140,6 +142,8 @@ Depending on the parameter space and state space we can define four type of stoc
   - Examples: 
   
 ## Stationary condition of a stochastic process
+ 
+ 
 
 ## Independent increments condition of a stochastic process
 
