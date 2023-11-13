@@ -324,7 +324,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="stochastic-proceses-vs-time-series" class="level2" data-number="1.8">
 <h2 data-number="1.8" class="anchored" data-anchor-id="stochastic-proceses-vs-time-series"><span class="header-section-number">1.8</span> Stochastic proceses vs Time series</h2>
-<p>Figure <span class="math inline">\(\ref{fig:figs1}\)</span> shows a weekly dengue cases in Sri Lanka from 2006 - Week 52 to 2023 - Week 8. The data are available in the denguedatahub package in R <span class="citation" data-cites="dengudatahub">(<a href="references.html#ref-dengudatahub" role="doc-biblioref"><strong>dengudatahub?</strong></a>)</span>. The first few rows of the dataset is shown below.</p>
+<p>Figure <a href="#fig-plot1">Figure&nbsp;<span>1.1</span></a> shows a weekly dengue cases in Sri Lanka from 2006 - Week 52 to 2023 - Week 8. The data are available in the denguedatahub package in R <span class="citation" data-cites="dengudatahub">(<a href="references.html#ref-dengudatahub" role="doc-biblioref"><strong>dengudatahub?</strong></a>)</span>. The first few rows of the dataset is shown below.</p>
 <div class="cell">
 <div class="cell-output-display">
 <table class="table table-sm table-striped small">
@@ -398,7 +398,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>.</p>
 <p>.</p>
 <p>.</p>
-<p>Do you consider <span class="math inline">\(\ref{fig:figs1}\)</span> as a visual representation of the above <strong>Stochastic Process</strong>?</p>
+<p>Do you consider <a href="#fig-plot1">Figure&nbsp;<span>1.1</span></a> as a visual representation of the above <strong>Stochastic Process</strong>?</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(denguedatahub) <span class="co"># to load data</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2) <span class="co"># for plotting</span></span>
@@ -410,18 +410,43 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_x_date</span>(<span class="at">date_breaks =</span> <span class="st">"1 year"</span>, <span class="at">date_labels =</span> <span class="st">"%Y"</span>) <span class="sc">+</span> </span>
 <span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">axis.text.x =</span> <span class="fu">element_text</span>(<span class="at">angle =</span> <span class="dv">90</span>, <span class="at">vjust =</span> <span class="fl">0.5</span>, <span class="at">hjust=</span><span class="dv">1</span>)) <span class="sc">+</span> <span class="fu">xlab</span>(<span class="st">"Time"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
+<div id="fig-plot1" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
-<p><img src="intro_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid figure-img" width="672"></p>
-<figcaption class="figure-caption">Weekly dengue cases in Sri Lanka from 2007 to 2023 August</figcaption>
+<p><img src="intro_files/figure-html/fig-plot1-1.png" class="img-fluid figure-img" width="672"></p>
+<figcaption class="figure-caption">Figure&nbsp;1.1: Weekly dengue cases in Sri Lanka from 2007 to 2023 August</figcaption>
 </figure>
 </div>
 </div>
 </div>
-<p>The answer is “No”. <span class="math inline">\(\ref{fig:figs1}\)</span> is not a visual representation of the stochastic process. It is a realization of the above stochastic process. According to the data set in the fifty second week of 2006, there were 76 cases were reported. This is the observed value of the random variable <span class="math inline">\(X_0\)</span>. Similarly, the observed value of the random variable <span class="math inline">\(X_1\)</span> is 40. Hence, <span class="math inline">\(\ref{fig:figs1}\)</span> represents the set of observed values of the the stochastic process. This is called a time series. “In other words, time series is a realization of a stochastic process. When we say a time series is a realization, we mean that it represents a specific outcome or path or trajectory of a stochastic process. A realization is essentially a particular observed sequence of values that the process can take.</p>
+<p>The answer is “No”. <a href="#fig-plot1">Figure&nbsp;<span>1.1</span></a> is not a visual representation of the stochastic process. It is a realization of the above stochastic process. According to the data set in the fifty second week of 2006, there were 76 cases were reported. This is the observed value of the random variable <span class="math inline">\(X_0\)</span>. Similarly, the observed value of the random variable <span class="math inline">\(X_1\)</span> is 40. Hence, <a href="#fig-plot1">Figure&nbsp;<span>1.1</span></a> represents the set of observed values of the the stochastic process. This is called a time series. “In other words, time series is a realization of a stochastic process. When we say a time series is a realization, we mean that it represents a specific outcome or path or trajectory of a stochastic process. A realization is essentially a particular observed sequence of values that the process can take. Therefore, when we say a time series is a realization of a stochastic process, we are highlighting that the observed sequence of data points in a time series is <strong>one possible outcome</strong> of a random process that unfolds over time. The stochastic nature implies that, even though the underlying process has certain statistical properties, the specific values observed at any given point in time are not predetermined and can exhibit variability.</p>
 </section>
 <section id="stochastic-process-vs-a-deterministic-process" class="level2" data-number="1.9">
 <h2 data-number="1.9" class="anchored" data-anchor-id="stochastic-process-vs-a-deterministic-process"><span class="header-section-number">1.9</span> Stochastic process vs a deterministic process</h2>
+<p>Consider the following data generating process and its visual representation. Let’s define the set of random variables as follows:</p>
+<p><span class="math inline">\(X_0\)</span> - value at time <span class="math inline">\(t=1\)</span></p>
+<p><span class="math inline">\(X_1\)</span> - value at time <span class="math inline">\(t=2\)</span></p>
+<p><span class="math inline">\(X_2\)</span> - value at time <span class="math inline">\(t=3\)</span></p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>Do you consider <a href="#fig-plot2">Figure&nbsp;<span>1.2</span></a> as a realization of a stochastic process?</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>t <span class="ot">&lt;-</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">100</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>xt <span class="ot">&lt;-</span> <span class="fu">sin</span>(<span class="dv">2</span><span class="sc">*</span>pi<span class="sc">*</span>t)</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">xt=</span>xt, <span class="at">t=</span>t)</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span>df, <span class="fu">aes</span>(<span class="at">x=</span>t, <span class="at">y=</span>xt)) <span class="sc">+</span> </span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span> </span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div id="fig-plot2" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="intro_files/figure-html/fig-plot2-1.png" class="img-fluid figure-img" width="672"></p>
+<figcaption class="figure-caption">Figure&nbsp;1.2: Visual representation of data</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>The answer is “No”. The reason is when you observe the above R-code you can see the values are generated based on the function <span class="math inline">\(sin(2\pit)\)</span>. Hence, there is no randomness associated with he random variables. This type of process is called a deterministic process.</p>
 </section>
 <section id="stationary-condition-of-a-stochastic-process" class="level2" data-number="1.10">
 <h2 data-number="1.10" class="anchored" data-anchor-id="stationary-condition-of-a-stochastic-process"><span class="header-section-number">1.10</span> Stationary condition of a stochastic process</h2>

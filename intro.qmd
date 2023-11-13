@@ -142,7 +142,7 @@ Depending on the parameter space and state space we can define four type of stoc
   
 ## Stochastic proceses vs Time series
 
-Figure \ref{fig:figs1} shows a weekly dengue cases in Sri Lanka from 2006 - Week 52 to 2023 - Week 8. The data are available in the denguedatahub package in R @dengudatahub. The first few rows of the dataset is shown below.
+Figure @fig-plot1 shows a weekly dengue cases in Sri Lanka from 2006 - Week 52 to 2023 - Week 8. The data are available in the denguedatahub package in R @dengudatahub. The first few rows of the dataset is shown below.
 
 ```{r, echo=FALSE, warning=FALSE, message=FALSE}
 library(denguedatahub) # to load data
@@ -168,10 +168,11 @@ $X_2$ - Cases of dengue during the second week of 2007
 
 .
 
-Do you consider \ref{fig:figs1} as a visual representation of the above **Stochastic Process**? 
+Do you consider @fig-plot1 as a visual representation of the above **Stochastic Process**? 
 
 
 ```{r, warning=FALSE, message=FALSE}
+#| label: fig-plot1
 #| fig-cap: "Weekly dengue cases in Sri Lanka from 2007 to 2023 August"
 library(denguedatahub) # to load data
 library(ggplot2) # for plotting
@@ -185,12 +186,44 @@ ggplot2::ggplot(aes(x=start.date, y=cases)) +
 ```
 
 
-The answer is "No". \ref{fig:figs1} is not a visual representation of the stochastic process. It is a realization of the above stochastic process. According to the data set in the fifty second week of 2006, there were 76 cases were reported. This is the observed value of the random variable $X_0$. Similarly, the observed value of the random variable $X_1$ is 40. Hence, \ref{fig:figs1} represents the set of observed values of the the stochastic process. This is called a time series. "In other words, time series is a realization of a stochastic process. When we say a time series is a realization, we mean that it represents a specific outcome or path or trajectory of a stochastic process. A realization is essentially a particular observed sequence of values that the process can take.
+The answer is "No". @fig-plot1 is not a visual representation of the stochastic process. It is a realization of the above stochastic process. According to the data set in the fifty second week of 2006, there were 76 cases were reported. This is the observed value of the random variable $X_0$. Similarly, the observed value of the random variable $X_1$ is 40. Hence, @fig-plot1 represents the set of observed values of the the stochastic process. This is called a time series. "In other words, time series is a realization of a stochastic process. When we say a time series is a realization, we mean that it represents a specific outcome or path or trajectory of a stochastic process. A realization is essentially a particular observed sequence of values that the process can take. Therefore, when we say a time series is a realization of a stochastic process, we are highlighting that the observed sequence of data points in a time series is **one possible outcome** of a random process that unfolds over time. The stochastic nature implies that, even though the underlying process has certain statistical properties, the specific values observed at any given point in time are not predetermined and can exhibit variability.
 
 
   
 ## Stochastic process vs a deterministic process   
 
+Consider the following data generating process and its visual representation. Let's define the set of random variables as follows:
+
+$X_0$ - value at time $t=1$
+
+$X_1$ - value at time $t=2$
+
+$X_2$ - value at time $t=3$
+
+.
+
+.
+
+.
+
+
+
+
+Do you consider @fig-plot2 as a realization of a stochastic process? 
+
+```{r, warning=FALSE, message=FALSE}
+#| label: fig-plot2
+#| fig-cap: "Visual representation of data"
+t <- 1:100
+xt <- sin(2*pi*t)
+df <- data.frame(xt=xt, t=t)
+ggplot(data=df, aes(x=t, y=xt)) + 
+  geom_point() + 
+  geom_line()
+
+```
+
+The answer is "No". The reason is when you observe the above R-code you can see the values are generated based on the function $sin(2\pit)$. Hence, there is no randomness associated with he random variables. This type of process is called a deterministic process. 
 
   
 ## Stationary condition of a stochastic process
