@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.2.253">
+<meta name="generator" content="quarto-1.3.433">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -17,8 +17,42 @@ div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
   width: 0.8em;
-  margin: 0 0.8em 0.2em -1.6em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -57,10 +91,12 @@ ul.task-list li input[type="checkbox"] {
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Clear",
     "search-detached-cancel-button-title": "Cancel",
-    "search-submit-button-title": "Submit"
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
   }
 }</script>
 
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 </head>
@@ -69,11 +105,16 @@ ul.task-list li input[type="checkbox"] {
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
-  <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
-    <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></h1>
-      <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
-        <i class="bi bi-chevron-right"></i>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./intro.html"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></a></li></ol></nav>
+      <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+      </a>
+      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
       </button>
     </div>
   </nav>
@@ -81,75 +122,83 @@ ul.task-list li input[type="checkbox"] {
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation floating overflow-auto">
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
       <a href="./">Introduction to Stochastic Processes</a> 
     </div>
       </div>
-      <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="mt-2 flex-shrink-0 align-items-center">
         <div class="sidebar-search">
         <div id="quarto-search" class="" title="Search"></div>
         </div>
-      </div>
+        </div>
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link">Preface</a>
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Preface</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./intro.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></a>
+  <a href="./intro.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./chapter2.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Discrete Parameter Markov Chains</span></a>
+  <a href="./chapter2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Discrete Parameter Markov Chains</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./summary.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Summary</span></a>
+  <a href="./summary.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Summary</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./references.html" class="sidebar-item-text sidebar-link">References</a>
+  <a href="./references.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">References</span></a>
   </div>
 </li>
     </ul>
     </div>
 </nav>
+<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#what-is-a-stochastic-process" id="toc-what-is-a-stochastic-process" class="nav-link active" data-scroll-target="#what-is-a-stochastic-process"><span class="toc-section-number">1.1</span>  What is a Stochastic Process?</a></li>
-  <li><a href="#definition-of-a-stochastic-process" id="toc-definition-of-a-stochastic-process" class="nav-link" data-scroll-target="#definition-of-a-stochastic-process"><span class="toc-section-number">1.2</span>  Definition of a stochastic process</a></li>
-  <li><a href="#parameter-space" id="toc-parameter-space" class="nav-link" data-scroll-target="#parameter-space"><span class="toc-section-number">1.3</span>  Parameter space</a>
+  <li><a href="#what-is-a-stochastic-process" id="toc-what-is-a-stochastic-process" class="nav-link active" data-scroll-target="#what-is-a-stochastic-process"><span class="header-section-number">1.1</span> What is a Stochastic Process?</a></li>
+  <li><a href="#definition-of-a-stochastic-process" id="toc-definition-of-a-stochastic-process" class="nav-link" data-scroll-target="#definition-of-a-stochastic-process"><span class="header-section-number">1.2</span> Definition of a stochastic process</a></li>
+  <li><a href="#parameter-space" id="toc-parameter-space" class="nav-link" data-scroll-target="#parameter-space"><span class="header-section-number">1.3</span> Parameter space</a>
   <ul class="collapse">
-  <li><a href="#discrete-parameter-process" id="toc-discrete-parameter-process" class="nav-link" data-scroll-target="#discrete-parameter-process"><span class="toc-section-number">1.3.1</span>  Discrete-parameter process</a></li>
-  <li><a href="#continuous-parameter-space" id="toc-continuous-parameter-space" class="nav-link" data-scroll-target="#continuous-parameter-space"><span class="toc-section-number">1.3.2</span>  Continuous-parameter space</a></li>
+  <li><a href="#discrete-parameter-process" id="toc-discrete-parameter-process" class="nav-link" data-scroll-target="#discrete-parameter-process"><span class="header-section-number">1.3.1</span> Discrete-parameter process</a></li>
+  <li><a href="#continuous-parameter-space" id="toc-continuous-parameter-space" class="nav-link" data-scroll-target="#continuous-parameter-space"><span class="header-section-number">1.3.2</span> Continuous-parameter space</a></li>
   </ul></li>
-  <li><a href="#state-space" id="toc-state-space" class="nav-link" data-scroll-target="#state-space"><span class="toc-section-number">1.4</span>  State space</a></li>
-  <li><a href="#random-variable-in-probability-theory-vs-stochastic-theory" id="toc-random-variable-in-probability-theory-vs-stochastic-theory" class="nav-link" data-scroll-target="#random-variable-in-probability-theory-vs-stochastic-theory"><span class="toc-section-number">1.5</span>  Random Variable in Probability Theory vs Stochastic Theory</a>
+  <li><a href="#state-space" id="toc-state-space" class="nav-link" data-scroll-target="#state-space"><span class="header-section-number">1.4</span> State space</a></li>
+  <li><a href="#random-variable-in-probability-theory-vs-stochastic-theory" id="toc-random-variable-in-probability-theory-vs-stochastic-theory" class="nav-link" data-scroll-target="#random-variable-in-probability-theory-vs-stochastic-theory"><span class="header-section-number">1.5</span> Random Variable in Probability Theory vs Stochastic Theory</a>
   <ul class="collapse">
-  <li><a href="#probability-theory" id="toc-probability-theory" class="nav-link" data-scroll-target="#probability-theory"><span class="toc-section-number">1.5.1</span>  Probability theory</a></li>
-  <li><a href="#stochastic-theory" id="toc-stochastic-theory" class="nav-link" data-scroll-target="#stochastic-theory"><span class="toc-section-number">1.5.2</span>  Stochastic theory</a></li>
+  <li><a href="#probability-theory" id="toc-probability-theory" class="nav-link" data-scroll-target="#probability-theory"><span class="header-section-number">1.5.1</span> Probability theory</a></li>
+  <li><a href="#stochastic-theory" id="toc-stochastic-theory" class="nav-link" data-scroll-target="#stochastic-theory"><span class="header-section-number">1.5.2</span> Stochastic theory</a></li>
   </ul></li>
-  <li><a href="#sample-path-trajectory-of-a-stochastic-process" id="toc-sample-path-trajectory-of-a-stochastic-process" class="nav-link" data-scroll-target="#sample-path-trajectory-of-a-stochastic-process"><span class="toc-section-number">1.6</span>  Sample path (trajectory) of a stochastic process</a></li>
-  <li><a href="#types-of-stochastic-processes" id="toc-types-of-stochastic-processes" class="nav-link" data-scroll-target="#types-of-stochastic-processes"><span class="toc-section-number">1.7</span>  Types of Stochastic Processes</a></li>
-  <li><a href="#stationary-condition-of-a-stochastic-process" id="toc-stationary-condition-of-a-stochastic-process" class="nav-link" data-scroll-target="#stationary-condition-of-a-stochastic-process"><span class="toc-section-number">1.8</span>  Stationary condition of a stochastic process</a></li>
-  <li><a href="#independent-increments-condition-of-a-stochastic-process" id="toc-independent-increments-condition-of-a-stochastic-process" class="nav-link" data-scroll-target="#independent-increments-condition-of-a-stochastic-process"><span class="toc-section-number">1.9</span>  Independent increments condition of a stochastic process</a></li>
-  <li><a href="#stationary-increments-condition-of-a-stochastic-process" id="toc-stationary-increments-condition-of-a-stochastic-process" class="nav-link" data-scroll-target="#stationary-increments-condition-of-a-stochastic-process"><span class="toc-section-number">1.10</span>  Stationary increments condition of a stochastic process</a></li>
-  <li><a href="#stochastic-process-vs-a-deterministic-process" id="toc-stochastic-process-vs-a-deterministic-process" class="nav-link" data-scroll-target="#stochastic-process-vs-a-deterministic-process"><span class="toc-section-number">1.11</span>  Stochastic process vs a deterministic process</a></li>
-  <li><a href="#stochastic-proceses-vs-time-series" id="toc-stochastic-proceses-vs-time-series" class="nav-link" data-scroll-target="#stochastic-proceses-vs-time-series"><span class="toc-section-number">1.12</span>  Stochastic proceses vs Time series</a></li>
-  <li><a href="#stochastic-processes-vs-probaility-calculation-in-a-single-random-variable" id="toc-stochastic-processes-vs-probaility-calculation-in-a-single-random-variable" class="nav-link" data-scroll-target="#stochastic-processes-vs-probaility-calculation-in-a-single-random-variable"><span class="toc-section-number">1.13</span>  Stochastic processes vs probaility calculation in a single random variable</a></li>
-  <li><a href="#applications-of-stochastic-processes" id="toc-applications-of-stochastic-processes" class="nav-link" data-scroll-target="#applications-of-stochastic-processes"><span class="toc-section-number">1.14</span>  Applications of stochastic processes</a></li>
+  <li><a href="#sample-path-trajectory-of-a-stochastic-process" id="toc-sample-path-trajectory-of-a-stochastic-process" class="nav-link" data-scroll-target="#sample-path-trajectory-of-a-stochastic-process"><span class="header-section-number">1.6</span> Sample path (trajectory) of a stochastic process</a></li>
+  <li><a href="#types-of-stochastic-processes" id="toc-types-of-stochastic-processes" class="nav-link" data-scroll-target="#types-of-stochastic-processes"><span class="header-section-number">1.7</span> Types of Stochastic Processes</a></li>
+  <li><a href="#stochastic-proceses-vs-time-series" id="toc-stochastic-proceses-vs-time-series" class="nav-link" data-scroll-target="#stochastic-proceses-vs-time-series"><span class="header-section-number">1.8</span> Stochastic proceses vs Time series</a></li>
+  <li><a href="#stochastic-process-vs-a-deterministic-process" id="toc-stochastic-process-vs-a-deterministic-process" class="nav-link" data-scroll-target="#stochastic-process-vs-a-deterministic-process"><span class="header-section-number">1.9</span> Stochastic process vs a deterministic process</a></li>
+  <li><a href="#stationary-condition-of-a-stochastic-process" id="toc-stationary-condition-of-a-stochastic-process" class="nav-link" data-scroll-target="#stationary-condition-of-a-stochastic-process"><span class="header-section-number">1.10</span> Stationary condition of a stochastic process</a></li>
+  <li><a href="#independent-increments-condition-of-a-stochastic-process" id="toc-independent-increments-condition-of-a-stochastic-process" class="nav-link" data-scroll-target="#independent-increments-condition-of-a-stochastic-process"><span class="header-section-number">1.11</span> Independent increments condition of a stochastic process</a></li>
+  <li><a href="#stationary-increments-condition-of-a-stochastic-process" id="toc-stationary-increments-condition-of-a-stochastic-process" class="nav-link" data-scroll-target="#stationary-increments-condition-of-a-stochastic-process"><span class="header-section-number">1.12</span> Stationary increments condition of a stochastic process</a></li>
+  <li><a href="#stochastic-process-vs-a-deterministic-process-1" id="toc-stochastic-process-vs-a-deterministic-process-1" class="nav-link" data-scroll-target="#stochastic-process-vs-a-deterministic-process-1"><span class="header-section-number">1.13</span> Stochastic process vs a deterministic process</a></li>
+  <li><a href="#stochastic-proceses-vs-time-series-1" id="toc-stochastic-proceses-vs-time-series-1" class="nav-link" data-scroll-target="#stochastic-proceses-vs-time-series-1"><span class="header-section-number">1.14</span> Stochastic proceses vs Time series</a></li>
+  <li><a href="#stochastic-processes-vs-probaility-calculation-in-a-single-random-variable" id="toc-stochastic-processes-vs-probaility-calculation-in-a-single-random-variable" class="nav-link" data-scroll-target="#stochastic-processes-vs-probaility-calculation-in-a-single-random-variable"><span class="header-section-number">1.15</span> Stochastic processes vs probaility calculation in a single random variable</a></li>
+  <li><a href="#applications-of-stochastic-processes" id="toc-applications-of-stochastic-processes" class="nav-link" data-scroll-target="#applications-of-stochastic-processes"><span class="header-section-number">1.16</span> Applications of stochastic processes</a></li>
   </ul>
 </nav>
     </div>
@@ -158,7 +207,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></h1>
+<h1 class="title"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></h1>
 </div>
 
 
@@ -203,11 +252,11 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="parameter-space" class="level2" data-number="1.3">
 <h2 data-number="1.3" class="anchored" data-anchor-id="parameter-space"><span class="header-section-number">1.3</span> Parameter space</h2>
-<p>In definition 1, the index set <span class="math inline">\(T\)</span> is called the parameter space. It is usually interpreted as a time variable,telling us when the process is measured. The parameter space can be discrete or continuous.</p>
+<p>In definition 1, the index set <span class="math inline">\(T\)</span> is called the parameter space. It is usually interpreted as a time variable, telling us when the process is measured. The parameter space can be discrete or continuous.</p>
 <section id="discrete-parameter-process" class="level3" data-number="1.3.1">
 <h3 data-number="1.3.1" class="anchored" data-anchor-id="discrete-parameter-process"><span class="header-section-number">1.3.1</span> Discrete-parameter process</h3>
 <p>When <span class="math inline">\(T\)</span> is a countable set, the process is said to be a discrete-parameter process. A discrete-parameter stochastic process is defined as follows:</p>
-<p><span class="math display">\[\{X_t: t \in T\}\]</span> <strong>Example:</strong> Number of Customers Arriving Each Hour to a particular super market (Discrete Parameter Space)</p>
+<p><span class="math display">\[\{X_t: t \in T\}\]</span> <strong>Example:</strong> Number of Customers arriving each hour to a particular super market (Discrete Parameter Space)</p>
 <p>In this scenario, you are interested in the number of customers arriving during each discrete time interval, typically on an hourly basis.</p>
 </section>
 <section id="continuous-parameter-space" class="level3" data-number="1.3.2">
@@ -236,7 +285,7 @@ ul.task-list li input[type="checkbox"] {
 <ul>
 <li>We will always assume that the cardinality of <span class="math inline">\(T\)</span> is infinite, either countable or uncountable.</li>
 </ul>
-<p>If <span class="math inline">\(T=\mathbb{Z}^+\)</span> then we called X a discrete time stochastic process.</p>
+<p>If <span class="math inline">\(T=\mathbb{Z}^+\)</span> then we called <span class="math inline">\(X\)</span> a discrete time stochastic process.</p>
 <p>If <span class="math inline">\(I = [0,\infty)\)</span>, then <span class="math inline">\(X\)</span> is said to be a continuous time stochastic processes.</p>
 </section>
 </section>
@@ -273,28 +322,129 @@ ul.task-list li input[type="checkbox"] {
 <li><p>Examples:</p></li>
 </ul>
 </section>
-<section id="stationary-condition-of-a-stochastic-process" class="level2" data-number="1.8">
-<h2 data-number="1.8" class="anchored" data-anchor-id="stationary-condition-of-a-stochastic-process"><span class="header-section-number">1.8</span> Stationary condition of a stochastic process</h2>
+<section id="stochastic-proceses-vs-time-series" class="level2" data-number="1.8">
+<h2 data-number="1.8" class="anchored" data-anchor-id="stochastic-proceses-vs-time-series"><span class="header-section-number">1.8</span> Stochastic proceses vs Time series</h2>
+<p>Figure <span class="math inline">\(\ref{fig:figs1}\)</span> shows a weekly dengue cases in Sri Lanka from 2006 - Week 52 to 2023 - Week 8. The data are available in the denguedatahub package in R <span class="citation" data-cites="dengudatahub">(<a href="references.html#ref-dengudatahub" role="doc-biblioref"><strong>dengudatahub?</strong></a>)</span>. The first few rows of the dataset is shown below.</p>
+<div class="cell">
+<div class="cell-output-display">
+<table class="table table-sm table-striped small">
+<thead>
+<tr class="header">
+<th style="text-align: right;">year</th>
+<th style="text-align: right;">week</th>
+<th style="text-align: left;">start.date</th>
+<th style="text-align: left;">end.date</th>
+<th style="text-align: left;">district</th>
+<th style="text-align: right;">cases</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">2006</td>
+<td style="text-align: right;">52</td>
+<td style="text-align: left;">2006-12-23</td>
+<td style="text-align: left;">2006-12-29</td>
+<td style="text-align: left;">Colombo</td>
+<td style="text-align: right;">71</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2007</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">2006-12-30</td>
+<td style="text-align: left;">2007-01-05</td>
+<td style="text-align: left;">Colombo</td>
+<td style="text-align: right;">40</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">2007</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: left;">2007-01-06</td>
+<td style="text-align: left;">2007-01-12</td>
+<td style="text-align: left;">Colombo</td>
+<td style="text-align: right;">43</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2007</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: left;">2007-01-13</td>
+<td style="text-align: left;">2007-01-19</td>
+<td style="text-align: left;">Colombo</td>
+<td style="text-align: right;">38</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">2007</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: left;">2007-01-20</td>
+<td style="text-align: left;">2007-01-26</td>
+<td style="text-align: left;">Colombo</td>
+<td style="text-align: right;">52</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2007</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: left;">2007-01-27</td>
+<td style="text-align: left;">2007-02-02</td>
+<td style="text-align: left;">Colombo</td>
+<td style="text-align: right;">69</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p>Let’s define the set of random variables as follows:</p>
+<p><span class="math inline">\(X_0\)</span> - Cases of dengue during the fifty second week of 2006</p>
+<p><span class="math inline">\(X_1\)</span> - Cases of dengue during the first week of 2007</p>
+<p><span class="math inline">\(X_2\)</span> - Cases of dengue during the second week of 2007</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>Do you consider <span class="math inline">\(\ref{fig:figs1}\)</span> as a visual representation of the above <strong>Stochastic Process</strong>?</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(denguedatahub) <span class="co"># to load data</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2) <span class="co"># for plotting</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">data</span>(srilanka_weekly_data)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>srilanka_weekly_data <span class="sc">|&gt;</span> </span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">filter</span>(district <span class="sc">==</span> <span class="st">"Colombo"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>ggplot2<span class="sc">::</span><span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x=</span>start.date, <span class="at">y=</span>cases)) <span class="sc">+</span> </span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>()  <span class="sc">+</span> </span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_x_date</span>(<span class="at">date_breaks =</span> <span class="st">"1 year"</span>, <span class="at">date_labels =</span> <span class="st">"%Y"</span>) <span class="sc">+</span> </span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">axis.text.x =</span> <span class="fu">element_text</span>(<span class="at">angle =</span> <span class="dv">90</span>, <span class="at">vjust =</span> <span class="fl">0.5</span>, <span class="at">hjust=</span><span class="dv">1</span>)) <span class="sc">+</span> <span class="fu">xlab</span>(<span class="st">"Time"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="intro_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid figure-img" width="672"></p>
+<figcaption class="figure-caption">Weekly dengue cases in Sri Lanka from 2007 to 2023 August</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>The answer is “No”. <span class="math inline">\(\ref{fig:figs1}\)</span> is not a visual representation of the stochastic process. It is a realization of the above stochastic process. According to the data set in the fifty second week of 2006, there were 76 cases were reported. This is the observed value of the random variable <span class="math inline">\(X_0\)</span>. Similarly, the observed value of the random variable <span class="math inline">\(X_1\)</span> is 40. Hence, <span class="math inline">\(\ref{fig:figs1}\)</span> represents the set of observed values of the the stochastic process. This is called a time series. “In other words, time series is a realization of a stochastic process. When we say a time series is a realization, we mean that it represents a specific outcome or path or trajectory of a stochastic process. A realization is essentially a particular observed sequence of values that the process can take.</p>
 </section>
-<section id="independent-increments-condition-of-a-stochastic-process" class="level2" data-number="1.9">
-<h2 data-number="1.9" class="anchored" data-anchor-id="independent-increments-condition-of-a-stochastic-process"><span class="header-section-number">1.9</span> Independent increments condition of a stochastic process</h2>
+<section id="stochastic-process-vs-a-deterministic-process" class="level2" data-number="1.9">
+<h2 data-number="1.9" class="anchored" data-anchor-id="stochastic-process-vs-a-deterministic-process"><span class="header-section-number">1.9</span> Stochastic process vs a deterministic process</h2>
 </section>
-<section id="stationary-increments-condition-of-a-stochastic-process" class="level2" data-number="1.10">
-<h2 data-number="1.10" class="anchored" data-anchor-id="stationary-increments-condition-of-a-stochastic-process"><span class="header-section-number">1.10</span> Stationary increments condition of a stochastic process</h2>
+<section id="stationary-condition-of-a-stochastic-process" class="level2" data-number="1.10">
+<h2 data-number="1.10" class="anchored" data-anchor-id="stationary-condition-of-a-stochastic-process"><span class="header-section-number">1.10</span> Stationary condition of a stochastic process</h2>
 </section>
-<section id="stochastic-process-vs-a-deterministic-process" class="level2" data-number="1.11">
-<h2 data-number="1.11" class="anchored" data-anchor-id="stochastic-process-vs-a-deterministic-process"><span class="header-section-number">1.11</span> Stochastic process vs a deterministic process</h2>
+<section id="independent-increments-condition-of-a-stochastic-process" class="level2" data-number="1.11">
+<h2 data-number="1.11" class="anchored" data-anchor-id="independent-increments-condition-of-a-stochastic-process"><span class="header-section-number">1.11</span> Independent increments condition of a stochastic process</h2>
 </section>
-<section id="stochastic-proceses-vs-time-series" class="level2" data-number="1.12">
-<h2 data-number="1.12" class="anchored" data-anchor-id="stochastic-proceses-vs-time-series"><span class="header-section-number">1.12</span> Stochastic proceses vs Time series</h2>
+<section id="stationary-increments-condition-of-a-stochastic-process" class="level2" data-number="1.12">
+<h2 data-number="1.12" class="anchored" data-anchor-id="stationary-increments-condition-of-a-stochastic-process"><span class="header-section-number">1.12</span> Stationary increments condition of a stochastic process</h2>
+</section>
+<section id="stochastic-process-vs-a-deterministic-process-1" class="level2" data-number="1.13">
+<h2 data-number="1.13" class="anchored" data-anchor-id="stochastic-process-vs-a-deterministic-process-1"><span class="header-section-number">1.13</span> Stochastic process vs a deterministic process</h2>
+</section>
+<section id="stochastic-proceses-vs-time-series-1" class="level2" data-number="1.14">
+<h2 data-number="1.14" class="anchored" data-anchor-id="stochastic-proceses-vs-time-series-1"><span class="header-section-number">1.14</span> Stochastic proceses vs Time series</h2>
 <p>Realization</p>
 <p>multiple realizations of a stochastic process.</p>
 </section>
-<section id="stochastic-processes-vs-probaility-calculation-in-a-single-random-variable" class="level2" data-number="1.13">
-<h2 data-number="1.13" class="anchored" data-anchor-id="stochastic-processes-vs-probaility-calculation-in-a-single-random-variable"><span class="header-section-number">1.13</span> Stochastic processes vs probaility calculation in a single random variable</h2>
+<section id="stochastic-processes-vs-probaility-calculation-in-a-single-random-variable" class="level2" data-number="1.15">
+<h2 data-number="1.15" class="anchored" data-anchor-id="stochastic-processes-vs-probaility-calculation-in-a-single-random-variable"><span class="header-section-number">1.15</span> Stochastic processes vs probaility calculation in a single random variable</h2>
 </section>
-<section id="applications-of-stochastic-processes" class="level2" data-number="1.14">
-<h2 data-number="1.14" class="anchored" data-anchor-id="applications-of-stochastic-processes"><span class="header-section-number">1.14</span> Applications of stochastic processes</h2>
+<section id="applications-of-stochastic-processes" class="level2" data-number="1.16">
+<h2 data-number="1.16" class="anchored" data-anchor-id="applications-of-stochastic-processes"><span class="header-section-number">1.16</span> Applications of stochastic processes</h2>
 
 
 </section>
@@ -327,9 +477,23 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     icon: icon
   };
   anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
   const clipboard = new window.ClipboardJS('.code-copy-button', {
-    target: function(trigger) {
-      return trigger.previousElementSibling;
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
     }
   });
   clipboard.on('success', function(e) {
@@ -394,6 +558,92 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       return note.innerHTML;
     });
   }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
   const findCites = (el) => {
     const parentEl = el.parentElement;
     if (parentEl) {
