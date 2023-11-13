@@ -2,7 +2,7 @@
 
 ## Introduction
 
-A discrete parameter Markov chain process is a modeling approach used to represent systems that evolve over time in **discrete steps**, where the **future state depends only on the current state**. This is very useful in analyzing distinct states and transitions.
+A discrete parameter Markov chain process is a modeling approach used to represent systems that evolve over time in **discrete steps**, where the **future state depends only on the current state**. This is very useful in analyzing distinct states and transitions. Discrete Parameter Markov Chains is also known as "Discrete-time Markov Chains".    
 
 **Definition**
 
@@ -35,6 +35,24 @@ it moves to state $j$ at the next step with a probability denoted by $p_{nij}$ ,
 probability does not depend upon which states the chain was in before the current state.
 
 The probabilities $p_{nij}$ are called one-step transition probabilities.
+
+## Time Homogeneous Discrete-Parameter Markov Chain
+
+If the conditional probability $P(X_{n+1}=j|X_n=i)$ does not depend on $n$, then the process is known as time homogeneous Markov chain process or stationary Markov chain process. Then we can write the conditional probability $p_{nij}$ as $P_{i,j}$. Moreover, when there is no risk of confusion, 
+we can write $P_{i,j}$ simply as $P_{ij}$. 
+### Intuition behind time-homogenous Markov chain process
+
+Suppose we observe the condition of crop's soil moisture on every morning. We record the conditions as dry, normal and wet. Let's denote the states as follows:
+
+- State 0: dry 
+
+- state 1: normal 
+
+- state 2: wet
+
+Let's assume that the soil moisture condition on a given day depends only on the moisture condition of the previous day. In this case conditional probability $P(X_{n+1}=j|X_n=i)$ actually depend on $n$. The probability of moving wet to wet ($P(X_{n+1}=2|X_n=2)$) is not same for the whole year. This probability is small during the dry season and very high during the rainy season. If you are living in a country with four seasons then this probability vary according to the seasons winter, summer, spring and autumn. Hence, this is a non-stationary discrete-parameter discrete-state space Markov chain process. We can use stationary Markov chain only for a short period of time. 
+
+In this book we only consider time-homogeneous Markov chain processes.
 
 ## Exercise 
 

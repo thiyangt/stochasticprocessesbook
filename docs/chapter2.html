@@ -143,16 +143,17 @@ ul.task-list li input[type="checkbox"] {
   <ul>
   <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction"><span class="header-section-number">2.1</span> Introduction</a></li>
   <li><a href="#one-step-transition-probabilities" id="toc-one-step-transition-probabilities" class="nav-link" data-scroll-target="#one-step-transition-probabilities"><span class="header-section-number">2.2</span> One-step transition probabilities</a></li>
-  <li><a href="#exercise" id="toc-exercise" class="nav-link" data-scroll-target="#exercise"><span class="header-section-number">2.3</span> Exercise</a></li>
-  <li><a href="#one-step-transition-probability-matrix" id="toc-one-step-transition-probability-matrix" class="nav-link" data-scroll-target="#one-step-transition-probability-matrix"><span class="header-section-number">2.4</span> One-step transition probability matrix</a></li>
-  <li><a href="#higher-n-step-transition-probabilities" id="toc-higher-n-step-transition-probabilities" class="nav-link" data-scroll-target="#higher-n-step-transition-probabilities"><span class="header-section-number">2.5</span> Higher (n-step) transition probabilities</a></li>
-  <li><a href="#chapman-kolmogorov-equations" id="toc-chapman-kolmogorov-equations" class="nav-link" data-scroll-target="#chapman-kolmogorov-equations"><span class="header-section-number">2.6</span> Chapman-Kolmogorov equations</a></li>
-  <li><a href="#exercise-1" id="toc-exercise-1" class="nav-link" data-scroll-target="#exercise-1"><span class="header-section-number">2.7</span> Exercise</a></li>
-  <li><a href="#n---step-transition-matrix" id="toc-n---step-transition-matrix" class="nav-link" data-scroll-target="#n---step-transition-matrix"><span class="header-section-number">2.8</span> <span class="math inline">\(n\)</span> - step transition matrix</a></li>
-  <li><a href="#n---step-transition-matrix-1" id="toc-n---step-transition-matrix-1" class="nav-link" data-scroll-target="#n---step-transition-matrix-1"><span class="header-section-number">2.9</span> <span class="math inline">\(n\)</span> - step transition matrix</a></li>
-  <li><a href="#classification-of-states" id="toc-classification-of-states" class="nav-link" data-scroll-target="#classification-of-states"><span class="header-section-number">2.10</span> Classification of states</a></li>
-  <li><a href="#limiting-probabilities" id="toc-limiting-probabilities" class="nav-link" data-scroll-target="#limiting-probabilities"><span class="header-section-number">2.11</span> Limiting probabilities</a></li>
-  <li><a href="#applications" id="toc-applications" class="nav-link" data-scroll-target="#applications"><span class="header-section-number">2.12</span> Applications</a></li>
+  <li><a href="#time-homogeneous-discrete-parameter-markov-chain" id="toc-time-homogeneous-discrete-parameter-markov-chain" class="nav-link" data-scroll-target="#time-homogeneous-discrete-parameter-markov-chain"><span class="header-section-number">2.3</span> Time Homogeneous Discrete-Parameter Markov Chain</a></li>
+  <li><a href="#exercise" id="toc-exercise" class="nav-link" data-scroll-target="#exercise"><span class="header-section-number">2.4</span> Exercise</a></li>
+  <li><a href="#one-step-transition-probability-matrix" id="toc-one-step-transition-probability-matrix" class="nav-link" data-scroll-target="#one-step-transition-probability-matrix"><span class="header-section-number">2.5</span> One-step transition probability matrix</a></li>
+  <li><a href="#higher-n-step-transition-probabilities" id="toc-higher-n-step-transition-probabilities" class="nav-link" data-scroll-target="#higher-n-step-transition-probabilities"><span class="header-section-number">2.6</span> Higher (n-step) transition probabilities</a></li>
+  <li><a href="#chapman-kolmogorov-equations" id="toc-chapman-kolmogorov-equations" class="nav-link" data-scroll-target="#chapman-kolmogorov-equations"><span class="header-section-number">2.7</span> Chapman-Kolmogorov equations</a></li>
+  <li><a href="#exercise-1" id="toc-exercise-1" class="nav-link" data-scroll-target="#exercise-1"><span class="header-section-number">2.8</span> Exercise</a></li>
+  <li><a href="#n---step-transition-matrix" id="toc-n---step-transition-matrix" class="nav-link" data-scroll-target="#n---step-transition-matrix"><span class="header-section-number">2.9</span> <span class="math inline">\(n\)</span> - step transition matrix</a></li>
+  <li><a href="#n---step-transition-matrix-1" id="toc-n---step-transition-matrix-1" class="nav-link" data-scroll-target="#n---step-transition-matrix-1"><span class="header-section-number">2.10</span> <span class="math inline">\(n\)</span> - step transition matrix</a></li>
+  <li><a href="#classification-of-states" id="toc-classification-of-states" class="nav-link" data-scroll-target="#classification-of-states"><span class="header-section-number">2.11</span> Classification of states</a></li>
+  <li><a href="#limiting-probabilities" id="toc-limiting-probabilities" class="nav-link" data-scroll-target="#limiting-probabilities"><span class="header-section-number">2.12</span> Limiting probabilities</a></li>
+  <li><a href="#applications" id="toc-applications" class="nav-link" data-scroll-target="#applications"><span class="header-section-number">2.13</span> Applications</a></li>
   </ul>
 </nav>
     </div>
@@ -178,7 +179,7 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="introduction" class="level2" data-number="2.1">
 <h2 data-number="2.1" class="anchored" data-anchor-id="introduction"><span class="header-section-number">2.1</span> Introduction</h2>
-<p>A discrete parameter Markov chain process is a modeling approach used to represent systems that evolve over time in <strong>discrete steps</strong>, where the <strong>future state depends only on the current state</strong>. This is very useful in analyzing distinct states and transitions.</p>
+<p>A discrete parameter Markov chain process is a modeling approach used to represent systems that evolve over time in <strong>discrete steps</strong>, where the <strong>future state depends only on the current state</strong>. This is very useful in analyzing distinct states and transitions. Discrete Parameter Markov Chains is also known as “Discrete-time Markov Chains”.</p>
 <p><strong>Definition</strong></p>
 <p>Let <span class="math inline">\(\{X_n; n = 0, 1, 2, ...\}\)</span> be a stochastic process that takes on a finite or countable number of possible values. If <span class="math inline">\(X_n=i,\)</span> then the process is said to be in state <span class="math inline">\(i\)</span> at time <span class="math inline">\(n\)</span>.</p>
 <p>The discrete-parameter, discrete state stochastic process <span class="math inline">\(\{X_n; n=0, 1, 2,...\}\)</span> is called a <strong>discrete-parameter Markov chain</strong> if for all states <span class="math inline">\(i_0, i_1,...i_{n-1}, i, j\)</span> and all <span class="math inline">\(n \geq 0\)</span>,</p>
@@ -195,14 +196,18 @@ $X_0, X_1,...X_{n-1}$ and the **present state** $X_n$, is independent of the pas
 <p>If the chain is currently in state <span class="math inline">\(i\)</span>, then it moves to state <span class="math inline">\(j\)</span> at the next step with a probability denoted by <span class="math inline">\(p_{nij}\)</span> , and this probability does not depend upon which states the chain was in before the current state.</p>
 <p>The probabilities <span class="math inline">\(p_{nij}\)</span> are called one-step transition probabilities.</p>
 </section>
-<section id="exercise" class="level2" data-number="2.3">
-<h2 data-number="2.3" class="anchored" data-anchor-id="exercise"><span class="header-section-number">2.3</span> Exercise</h2>
+<section id="time-homogeneous-discrete-parameter-markov-chain" class="level2" data-number="2.3">
+<h2 data-number="2.3" class="anchored" data-anchor-id="time-homogeneous-discrete-parameter-markov-chain"><span class="header-section-number">2.3</span> Time Homogeneous Discrete-Parameter Markov Chain</h2>
+<p>If the conditional probability <span class="math inline">\(P(X_{n+1}=j|X_n=i)\)</span> does not depend on <span class="math inline">\(n\)</span>, then the process is known as time homogeneous Markov chain process or stationary Markov chain process. Then we can write the conditional probability <span class="math inline">\(p_{nij}\)</span> as <span class="math inline">\(P_{i,j}\)</span>. Moreover, when there is no risk of confusion, we can write <span class="math inline">\(P_{i,j}\)</span> simply as <span class="math inline">\(P_{ij}\)</span>.</p>
+</section>
+<section id="exercise" class="level2" data-number="2.4">
+<h2 data-number="2.4" class="anchored" data-anchor-id="exercise"><span class="header-section-number">2.4</span> Exercise</h2>
 <ol type="1">
 <li>Suppose there are two types of crops (Crop A and Crop B) planted in different fields, and farmers perform certain operations that may affect the composition of crops in each field. After each agricultural season, a random selection of crops from one field is transferred to the other. Let <span class="math inline">\(X_t\)</span> denote the number of Crop A plants in the first field after the <span class="math inline">\(t\)</span>th season. What are the parameter space and state space for this agricultural scenario, and can <span class="math inline">\(\{X\_t\}\)</span> be considered a Markov chain given certain conditions on the planting and transfer processes?</li>
 </ol>
 </section>
-<section id="one-step-transition-probability-matrix" class="level2" data-number="2.4">
-<h2 data-number="2.4" class="anchored" data-anchor-id="one-step-transition-probability-matrix"><span class="header-section-number">2.4</span> One-step transition probability matrix</h2>
+<section id="one-step-transition-probability-matrix" class="level2" data-number="2.5">
+<h2 data-number="2.5" class="anchored" data-anchor-id="one-step-transition-probability-matrix"><span class="header-section-number">2.5</span> One-step transition probability matrix</h2>
 <p>Let <span class="math inline">\(P\)</span> denote the matrix of one-step transition probabilities <span class="math inline">\(P_{ij}\)</span>, so that</p>
 <p><span class="math display">\[P = \left[\begin{array}{cccccccc}
 p_{00} &amp; p_{01} &amp; p_{02} &amp; ...\\
@@ -214,26 +219,26 @@ p_{i0} &amp; p_{i1} &amp; p_{i2} &amp; ...\\
 <p>Since probabilities are nonnegative and since the process must make a transition into some state, we have</p>
 <p><span class="math inline">\(p_{ij} \geq 0,\)</span> for <span class="math inline">\(i, j \geq 0\)</span>, <span class="math inline">\(\sum_{j=0}^\infty p_{ij} = 1,\)</span> for <span class="math inline">\(i = 0, 1, ...\)</span></p>
 </section>
-<section id="higher-n-step-transition-probabilities" class="level2" data-number="2.5">
-<h2 data-number="2.5" class="anchored" data-anchor-id="higher-n-step-transition-probabilities"><span class="header-section-number">2.5</span> Higher (n-step) transition probabilities</h2>
+<section id="higher-n-step-transition-probabilities" class="level2" data-number="2.6">
+<h2 data-number="2.6" class="anchored" data-anchor-id="higher-n-step-transition-probabilities"><span class="header-section-number">2.6</span> Higher (n-step) transition probabilities</h2>
 <p><span class="math inline">\(P_{ij}\)</span> - One step transition probabilities</p>
 <p><span class="math inline">\(P^n_{ij}\)</span> - n - step transition probabilities</p>
 <p>Probability that a process in state <span class="math inline">\(i\)</span> will be in state <span class="math inline">\(j\)</span> after <span class="math inline">\(n\)</span> additional transitions. That is,</p>
 <p><span class="math display">\[P^n_{ij}=P(X_{n+k}=j|X_k=i), \text{ } n\geq 0, \text{ }i, j \geq 0.\]</span></p>
 </section>
-<section id="chapman-kolmogorov-equations" class="level2" data-number="2.6">
-<h2 data-number="2.6" class="anchored" data-anchor-id="chapman-kolmogorov-equations"><span class="header-section-number">2.6</span> Chapman-Kolmogorov equations</h2>
+<section id="chapman-kolmogorov-equations" class="level2" data-number="2.7">
+<h2 data-number="2.7" class="anchored" data-anchor-id="chapman-kolmogorov-equations"><span class="header-section-number">2.7</span> Chapman-Kolmogorov equations</h2>
 <p><span class="math display">\[P_{ij}^{n+m}=\sum_{k=0}^{\infty}P_{ik}^nP_{kj}^m\text{ for all n, m} \geq 0, \text{ all i, j,}\]</span> where, <span class="math inline">\(P^n_{ik}P^m_{kj}\)</span> represents the probability that starting in <span class="math inline">\(i\)</span> the process will go to state <span class="math inline">\(j\)</span> in <span class="math inline">\(n+m\)</span> with an intermediate stop in state <span class="math inline">\(k\)</span> after <span class="math inline">\(n\)</span> steps.</p>
 <p>This can be used to compute <span class="math inline">\(n\)</span>-step transition probabilities</p>
 </section>
-<section id="exercise-1" class="level2" data-number="2.7">
-<h2 data-number="2.7" class="anchored" data-anchor-id="exercise-1"><span class="header-section-number">2.7</span> Exercise</h2>
+<section id="exercise-1" class="level2" data-number="2.8">
+<h2 data-number="2.8" class="anchored" data-anchor-id="exercise-1"><span class="header-section-number">2.8</span> Exercise</h2>
 <ol type="1">
 <li>Show that <span class="math inline">\(P_{ij}^{n+m}=\sum_{k=0}^{\infty}P_{ik}^nP_{kj}^m\text{ for all n, m} \geq 0, \text{ all i, j.}\)</span></li>
 </ol>
 </section>
-<section id="n---step-transition-matrix" class="level2" data-number="2.8">
-<h2 data-number="2.8" class="anchored" data-anchor-id="n---step-transition-matrix"><span class="header-section-number">2.8</span> <span class="math inline">\(n\)</span> - step transition matrix</h2>
+<section id="n---step-transition-matrix" class="level2" data-number="2.9">
+<h2 data-number="2.9" class="anchored" data-anchor-id="n---step-transition-matrix"><span class="header-section-number">2.9</span> <span class="math inline">\(n\)</span> - step transition matrix</h2>
 <p>The n-step transition matrix is</p>
 <p><span class="math display">\[\mathbf{P}^{(n)} = \left[\begin{array}
 {rrrr}
@@ -249,19 +254,19 @@ P_{10}^{(n)} &amp; P_{11}^{(n)} &amp; P_{12}^{(n)} &amp; ...\\
 <p><span class="math display">\[\mathbf{P}^{(2)}=\mathbf{P}^{(1)}\mathbf{P}^{(1)}=\mathbf{P}\mathbf{P}=\mathbf{P}^2.\]</span> By induction,</p>
 <p><span class="math display">\[\mathbf{P}^{(n)}=\mathbf{P}^{(n-1+1)}=\mathbf{P}^{n-1}\mathbf{P}=\mathbf{P}^n.\]</span></p>
 </section>
-<section id="n---step-transition-matrix-1" class="level2" data-number="2.9">
-<h2 data-number="2.9" class="anchored" data-anchor-id="n---step-transition-matrix-1"><span class="header-section-number">2.9</span> <span class="math inline">\(n\)</span> - step transition matrix</h2>
+<section id="n---step-transition-matrix-1" class="level2" data-number="2.10">
+<h2 data-number="2.10" class="anchored" data-anchor-id="n---step-transition-matrix-1"><span class="header-section-number">2.10</span> <span class="math inline">\(n\)</span> - step transition matrix</h2>
 <p><strong>Proposition</strong></p>
 <p><span class="math display">\[P^{(n)} = P^n = P \times P \times P \times ... \times P, \text{ } n \geq 1.\]</span> That is, <span class="math inline">\(P^{(n)}\)</span> is equal to <span class="math inline">\(P\)</span> multiplied by itself <span class="math inline">\(n\)</span> times.</p>
 </section>
-<section id="classification-of-states" class="level2" data-number="2.10">
-<h2 data-number="2.10" class="anchored" data-anchor-id="classification-of-states"><span class="header-section-number">2.10</span> Classification of states</h2>
+<section id="classification-of-states" class="level2" data-number="2.11">
+<h2 data-number="2.11" class="anchored" data-anchor-id="classification-of-states"><span class="header-section-number">2.11</span> Classification of states</h2>
 </section>
-<section id="limiting-probabilities" class="level2" data-number="2.11">
-<h2 data-number="2.11" class="anchored" data-anchor-id="limiting-probabilities"><span class="header-section-number">2.11</span> Limiting probabilities</h2>
+<section id="limiting-probabilities" class="level2" data-number="2.12">
+<h2 data-number="2.12" class="anchored" data-anchor-id="limiting-probabilities"><span class="header-section-number">2.12</span> Limiting probabilities</h2>
 </section>
-<section id="applications" class="level2" data-number="2.12">
-<h2 data-number="2.12" class="anchored" data-anchor-id="applications"><span class="header-section-number">2.12</span> Applications</h2>
+<section id="applications" class="level2" data-number="2.13">
+<h2 data-number="2.13" class="anchored" data-anchor-id="applications"><span class="header-section-number">2.13</span> Applications</h2>
 
 
 </section>
