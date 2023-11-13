@@ -51,14 +51,14 @@ A stochastic process is a collection of random variables $\{X_t, t\in T\}$ or ${
 
 ## Parameter space
 
-In definition 1, the index set $T$ is called the parameter space. It is usually interpreted as a time variable,telling us when the process is measured. The parameter space can be discrete or continuous. 
+In definition 1, the index set $T$ is called the parameter space. It is usually interpreted as a time variable, telling us when the process is measured. The parameter space can be discrete or continuous. 
 
 ### Discrete-parameter process
 
 When $T$ is a countable set, the process is said to be a discrete-parameter process. A discrete-parameter stochastic process is defined as follows:
 
 $$\{X_t: t \in T\}$$
-**Example:** Number of Customers Arriving Each Hour to a particular super market (Discrete Parameter Space)
+**Example:** Number of Customers arriving each hour to a particular super market (Discrete Parameter Space)
 
 In this scenario, you are interested in the number of customers arriving during each discrete time interval, typically on an hourly basis. 
 
@@ -91,10 +91,9 @@ Let $(\Omega, \mathscr{F}, \mathbb{P})$ be a probability space. A measurable map
 
 Suppose that $(\Omega, \mathscr{F}, \mathbb{P})$ is a probability space, the function $X: T \times \Omega \rightarrow \mathbb{R}$ .
 
-- We will always assume that the cardinality of $T$ is infinite, either countable or
-uncountable.
+- We will always assume that the cardinality of $T$ is infinite, either countable or uncountable.
 
-If $T=\mathbb{Z}^+$ then we called X a discrete time stochastic process.
+If $T=\mathbb{Z}^+$ then we called $X$ a discrete time stochastic process.
 
 If $I = [0,\infty)$,
 then $X$ is said to be a continuous time stochastic processes.
@@ -140,6 +139,59 @@ Depending on the parameter space and state space we can define four type of stoc
   - State Space: Continuous
 
   - Examples: 
+  
+## Stochastic proceses vs Time series
+
+Figure \ref{fig:figs1} shows a weekly dengue cases in Sri Lanka from 2006 - Week 52 to 2023 - Week 8. The data are available in the denguedatahub package in R @dengudatahub. The first few rows of the dataset is shown below.
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE}
+library(denguedatahub) # to load data
+library(knitr)
+data(srilanka_weekly_data)
+srilanka_weekly_data |> 
+  dplyr::filter(district == "Colombo") |>
+  head(6) |> kable()
+```
+
+
+Let's define the set of random variables as follows:
+
+$X_0$ - Cases of dengue during the fifty second week of 2006
+
+$X_1$ - Cases of dengue during the first week of 2007
+
+$X_2$ - Cases of dengue during the second week of 2007
+
+.
+
+.
+
+.
+
+Do you consider \ref{fig:figs1} as a visual representation of the above **Stochastic Process**? 
+
+
+```{r, warning=FALSE, message=FALSE}
+#| fig-cap: "Weekly dengue cases in Sri Lanka from 2007 to 2023 August"
+library(denguedatahub) # to load data
+library(ggplot2) # for plotting
+data(srilanka_weekly_data)
+srilanka_weekly_data |> 
+  dplyr::filter(district == "Colombo") |>
+ggplot2::ggplot(aes(x=start.date, y=cases)) + 
+  geom_line()  + 
+  scale_x_date(date_breaks = "1 year", date_labels = "%Y") + 
+  theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1)) + xlab("Time")
+```
+
+
+The answer is "No". \ref{fig:figs1} is not a visual representation of the stochastic process. It is a realization of the above stochastic process. According to the data set in the fifty second week of 2006, there were 76 cases were reported. This is the observed value of the random variable $X_0$. Similarly, the observed value of the random variable $X_1$ is 40. Hence, \ref{fig:figs1} represents the set of observed values of the the stochastic process. This is called a time series. "In other words, time series is a realization of a stochastic process. When we say a time series is a realization, we mean that it represents a specific outcome or path or trajectory of a stochastic process. A realization is essentially a particular observed sequence of values that the process can take.
+
+
+  
+## Stochastic process vs a deterministic process   
+
+
   
 ## Stationary condition of a stochastic process
  
