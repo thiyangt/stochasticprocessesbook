@@ -2,13 +2,116 @@
 
 ## Introduction
 
-## One-step transition probabilities
+A discrete parameter Markov chain process is a modeling approach used to represent systems that evolve over time in **discrete steps**, where the **future state depends only on the current state**. This is very useful in analyzing distinct states and transitions.
+
+**Definition**
+
+Let $\{X_n; n = 0, 1, 2, ...\}$ be a stochastic process that takes on a finite or countable number of possible values. If $X_n=i,$ then the process is said to be in state $i$ at time $n$.
+
+The discrete-parameter, discrete state stochastic process $\{X_n; n=0, 1, 2,...\}$ is called a **discrete-parameter Markov chain** if for all states $i_0, i_1,...i_{n-1}, i, j$ and all $n \geq 0$,
+
+
+
+$$P(X_{n+1}=j|X_n=i, X_{n-1}=i_{n-1}, ..., X_1=i_1, X_0=i_0) = P(X_{n+1}=j|X_n=i).$$
+
+
+<!--This means, for a Markov
+chain, the conditional distribution of any **future state** $X_{n+1}$, given the **past states**
+$X_0, X_1,...X_{n-1}$ and the **present state** $X_n$, is independent of the past states and depends only on the present state.-->
+
+This means, a stochastic process is a Markov chain if the probability of moving to the next state depends only on the current state and not on the sequence of events that preceded it.
 
 ## One-step transition probabilities
+
+
+We have a set of states, $S = \{i_0, i_1, i_2,...i_{n-1}, i, j\}$. The process starts in one of these states and moves successively from one state to another. Each move is called a **step**.
+
+
+$P_{nij} = P(X_{n+1}=j|X_n=i, X_{n-1}=i_{n-1}, ..., X_1=i_1, X_0=i_0) = P(X_{n+1}=j|X_n=i)$
+
+
+If the chain is currently in state $i$, then
+it moves to state $j$ at the next step with a probability denoted by $p_{nij}$ , and this
+probability does not depend upon which states the chain was in before the current state.
+
+The probabilities $p_{nij}$ are called one-step transition probabilities.
+
+## Exercise 
+
+1. Suppose there are two types of crops (Crop A and Crop B) planted in different fields, and farmers perform certain operations that may affect the composition of crops in each field. After each agricultural season, a random selection of crops from one field is transferred to the other. Let $X_t$ denote the number of Crop A plants in the first field after the $t$th season. What are the parameter space and state space for this agricultural scenario, and can $\{X\_t\}$ be considered a Markov chain given certain conditions on the planting and transfer processes?
+
+## One-step transition probability matrix
+
+Let $P$ denote the matrix of one-step transition probabilities $P_{ij}$, so that
+
+$$P = \left[\begin{array}{cccccccc}
+p_{00} & p_{01} & p_{02} & ...\\
+p_{10} & p_{11} & p_{12} & ...\\
+. & . & . & ...\\
+p_{i0} & p_{i1} & p_{i2} & ...\\
+. & . & . & ...
+\end{array}\right]$$
+
+Since probabilities are nonnegative and since
+the process must make a transition into some state, we have
+
+$p_{ij} \geq 0,$ for $i, j \geq 0$, $\sum_{j=0}^\infty p_{ij} = 1,$ for $i = 0, 1, ...$
+
+## Higher (n-step) transition probabilities 
+
+$P_{ij}$ - One step transition probabilities
+
+$P^n_{ij}$ - n - step transition probabilities
+
+Probability that a process in state $i$ will be in state $j$ after $n$ additional transitions. That is,
+
+$$P^n_{ij}=P(X_{n+k}=j|X_k=i), \text{ } n\geq 0, \text{ }i, j \geq 0.$$
 
 ## Chapman-Kolmogorov equations
 
-## Higher (n-step) transition probabilities
+$$P_{ij}^{n+m}=\sum_{k=0}^{\infty}P_{ik}^nP_{kj}^m\text{ for all n, m} \geq 0, \text{ all i, j,}$$
+where, $P^n_{ik}P^m_{kj}$ represents the probability that starting in $i$ the process will go to state $j$ in $n+m$ with an intermediate stop in state $k$ after $n$ steps.
+
+This can be used to compute $n$-step transition probabilities
+
+## Exercise
+
+1. Show that $P_{ij}^{n+m}=\sum_{k=0}^{\infty}P_{ik}^nP_{kj}^m\text{ for all n, m} \geq 0, \text{ all i, j.}$
+
+## $n$ - step transition matrix
+
+
+The n-step transition matrix is
+
+$$\mathbf{P}^{(n)} = \left[\begin{array}
+{rrrr}
+P_{00}^{(n)} & P_{01}^{(n)} & P_{02}^{(n)} & ...\\
+P_{10}^{(n)} & P_{11}^{(n)} & P_{12}^{(n)} & ...\\
+. & .  & . & ...\\
+. & .  & . & ...\\
+. & .  & . & ...\\
+\end{array}\right]
+$$
+The Chapman-Kolmogrov equations imply 
+
+$$\mathbf{P}^{(n+m)}=P^{(n)}P^{(m)}.$$
+  
+In particular, 
+  
+  $$\mathbf{P}^{(2)}=\mathbf{P}^{(1)}\mathbf{P}^{(1)}=\mathbf{P}\mathbf{P}=\mathbf{P}^2.$$
+  By induction, 
+
+$$\mathbf{P}^{(n)}=\mathbf{P}^{(n-1+1)}=\mathbf{P}^{n-1}\mathbf{P}=\mathbf{P}^n.$$
+
+
+## $n$ - step transition matrix
+  
+  **Proposition**
+  
+  $$P^{(n)} = P^n = P \times P \times P \times ... \times P, \text{ } n \geq 1.$$
+    That is, $P^{(n)}$ is equal to $P$ multiplied by itself $n$ times.
+
+
 
 ## Classification of states
 

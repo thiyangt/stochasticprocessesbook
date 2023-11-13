@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.2.253">
+<meta name="generator" content="quarto-1.3.433">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -17,7 +17,7 @@ div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
   width: 0.8em;
-  margin: 0 0.8em 0.2em -1.6em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
 </style>
@@ -57,10 +57,13 @@ ul.task-list li input[type="checkbox"] {
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Clear",
     "search-detached-cancel-button-title": "Cancel",
-    "search-submit-button-title": "Submit"
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
   }
 }</script>
 
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 </head>
 
@@ -68,11 +71,16 @@ ul.task-list li input[type="checkbox"] {
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
-  <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
-    <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Discrete Parameter Markov Chains</span></h1>
-      <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
-        <i class="bi bi-chevron-right"></i>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./chapter2.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Discrete Parameter Markov Chains</span></a></li></ol></nav>
+      <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+      </a>
+      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
       </button>
     </div>
   </nav>
@@ -80,61 +88,71 @@ ul.task-list li input[type="checkbox"] {
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation floating overflow-auto">
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
       <a href="./">Introduction to Stochastic Processes</a> 
     </div>
       </div>
-      <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="mt-2 flex-shrink-0 align-items-center">
         <div class="sidebar-search">
         <div id="quarto-search" class="" title="Search"></div>
         </div>
-      </div>
+        </div>
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link">Preface</a>
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Preface</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./intro.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></a>
+  <a href="./intro.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./chapter2.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Discrete Parameter Markov Chains</span></a>
+  <a href="./chapter2.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Discrete Parameter Markov Chains</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./summary.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Summary</span></a>
+  <a href="./summary.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Summary</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./references.html" class="sidebar-item-text sidebar-link">References</a>
+  <a href="./references.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">References</span></a>
   </div>
 </li>
     </ul>
     </div>
 </nav>
+<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction"><span class="toc-section-number">2.1</span>  Introduction</a></li>
-  <li><a href="#one-step-transition-probabilities" id="toc-one-step-transition-probabilities" class="nav-link" data-scroll-target="#one-step-transition-probabilities"><span class="toc-section-number">2.2</span>  One-step transition probabilities</a></li>
-  <li><a href="#one-step-transition-probabilities-1" id="toc-one-step-transition-probabilities-1" class="nav-link" data-scroll-target="#one-step-transition-probabilities-1"><span class="toc-section-number">2.3</span>  One-step transition probabilities</a></li>
-  <li><a href="#chapman-kolmogorov-equations" id="toc-chapman-kolmogorov-equations" class="nav-link" data-scroll-target="#chapman-kolmogorov-equations"><span class="toc-section-number">2.4</span>  Chapman-Kolmogorov equations</a></li>
-  <li><a href="#higher-n-step-transition-probabilities" id="toc-higher-n-step-transition-probabilities" class="nav-link" data-scroll-target="#higher-n-step-transition-probabilities"><span class="toc-section-number">2.5</span>  Higher (n-step) transition probabilities</a></li>
-  <li><a href="#classification-of-states" id="toc-classification-of-states" class="nav-link" data-scroll-target="#classification-of-states"><span class="toc-section-number">2.6</span>  Classification of states</a></li>
-  <li><a href="#limiting-probabilities" id="toc-limiting-probabilities" class="nav-link" data-scroll-target="#limiting-probabilities"><span class="toc-section-number">2.7</span>  Limiting probabilities</a></li>
-  <li><a href="#applications" id="toc-applications" class="nav-link" data-scroll-target="#applications"><span class="toc-section-number">2.8</span>  Applications</a></li>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction"><span class="header-section-number">2.1</span> Introduction</a></li>
+  <li><a href="#one-step-transition-probabilities" id="toc-one-step-transition-probabilities" class="nav-link" data-scroll-target="#one-step-transition-probabilities"><span class="header-section-number">2.2</span> One-step transition probabilities</a></li>
+  <li><a href="#exercise" id="toc-exercise" class="nav-link" data-scroll-target="#exercise"><span class="header-section-number">2.3</span> Exercise</a></li>
+  <li><a href="#one-step-transition-probability-matrix" id="toc-one-step-transition-probability-matrix" class="nav-link" data-scroll-target="#one-step-transition-probability-matrix"><span class="header-section-number">2.4</span> One-step transition probability matrix</a></li>
+  <li><a href="#higher-n-step-transition-probabilities" id="toc-higher-n-step-transition-probabilities" class="nav-link" data-scroll-target="#higher-n-step-transition-probabilities"><span class="header-section-number">2.5</span> Higher (n-step) transition probabilities</a></li>
+  <li><a href="#chapman-kolmogorov-equations" id="toc-chapman-kolmogorov-equations" class="nav-link" data-scroll-target="#chapman-kolmogorov-equations"><span class="header-section-number">2.6</span> Chapman-Kolmogorov equations</a></li>
+  <li><a href="#exercise-1" id="toc-exercise-1" class="nav-link" data-scroll-target="#exercise-1"><span class="header-section-number">2.7</span> Exercise</a></li>
+  <li><a href="#n---step-transition-matrix" id="toc-n---step-transition-matrix" class="nav-link" data-scroll-target="#n---step-transition-matrix"><span class="header-section-number">2.8</span> <span class="math inline">\(n\)</span> - step transition matrix</a></li>
+  <li><a href="#n---step-transition-matrix-1" id="toc-n---step-transition-matrix-1" class="nav-link" data-scroll-target="#n---step-transition-matrix-1"><span class="header-section-number">2.9</span> <span class="math inline">\(n\)</span> - step transition matrix</a></li>
+  <li><a href="#classification-of-states" id="toc-classification-of-states" class="nav-link" data-scroll-target="#classification-of-states"><span class="header-section-number">2.10</span> Classification of states</a></li>
+  <li><a href="#limiting-probabilities" id="toc-limiting-probabilities" class="nav-link" data-scroll-target="#limiting-probabilities"><span class="header-section-number">2.11</span> Limiting probabilities</a></li>
+  <li><a href="#applications" id="toc-applications" class="nav-link" data-scroll-target="#applications"><span class="header-section-number">2.12</span> Applications</a></li>
   </ul>
 </nav>
     </div>
@@ -143,7 +161,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Discrete Parameter Markov Chains</span></h1>
+<h1 class="title"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Discrete Parameter Markov Chains</span></h1>
 </div>
 
 
@@ -160,27 +178,90 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="introduction" class="level2" data-number="2.1">
 <h2 data-number="2.1" class="anchored" data-anchor-id="introduction"><span class="header-section-number">2.1</span> Introduction</h2>
+<p>A discrete parameter Markov chain process is a modeling approach used to represent systems that evolve over time in <strong>discrete steps</strong>, where the <strong>future state depends only on the current state</strong>. This is very useful in analyzing distinct states and transitions.</p>
+<p><strong>Definition</strong></p>
+<p>Let <span class="math inline">\(\{X_n; n = 0, 1, 2, ...\}\)</span> be a stochastic process that takes on a finite or countable number of possible values. If <span class="math inline">\(X_n=i,\)</span> then the process is said to be in state <span class="math inline">\(i\)</span> at time <span class="math inline">\(n\)</span>.</p>
+<p>The discrete-parameter, discrete state stochastic process <span class="math inline">\(\{X_n; n=0, 1, 2,...\}\)</span> is called a <strong>discrete-parameter Markov chain</strong> if for all states <span class="math inline">\(i_0, i_1,...i_{n-1}, i, j\)</span> and all <span class="math inline">\(n \geq 0\)</span>,</p>
+<p><span class="math display">\[P(X_{n+1}=j|X_n=i, X_{n-1}=i_{n-1}, ..., X_1=i_1, X_0=i_0) = P(X_{n+1}=j|X_n=i).\]</span></p>
+<!--This means, for a Markov
+chain, the conditional distribution of any **future state** $X_{n+1}$, given the **past states**
+$X_0, X_1,...X_{n-1}$ and the **present state** $X_n$, is independent of the past states and depends only on the present state.-->
+<p>This means, a stochastic process is a Markov chain if the probability of moving to the next state depends only on the current state and not on the sequence of events that preceded it.</p>
 </section>
 <section id="one-step-transition-probabilities" class="level2" data-number="2.2">
 <h2 data-number="2.2" class="anchored" data-anchor-id="one-step-transition-probabilities"><span class="header-section-number">2.2</span> One-step transition probabilities</h2>
+<p>We have a set of states, <span class="math inline">\(S = \{i_0, i_1, i_2,...i_{n-1}, i, j\}\)</span>. The process starts in one of these states and moves successively from one state to another. Each move is called a <strong>step</strong>.</p>
+<p><span class="math inline">\(P_{nij} = P(X_{n+1}=j|X_n=i, X_{n-1}=i_{n-1}, ..., X_1=i_1, X_0=i_0) = P(X_{n+1}=j|X_n=i)\)</span></p>
+<p>If the chain is currently in state <span class="math inline">\(i\)</span>, then it moves to state <span class="math inline">\(j\)</span> at the next step with a probability denoted by <span class="math inline">\(p_{nij}\)</span> , and this probability does not depend upon which states the chain was in before the current state.</p>
+<p>The probabilities <span class="math inline">\(p_{nij}\)</span> are called one-step transition probabilities.</p>
 </section>
-<section id="one-step-transition-probabilities-1" class="level2" data-number="2.3">
-<h2 data-number="2.3" class="anchored" data-anchor-id="one-step-transition-probabilities-1"><span class="header-section-number">2.3</span> One-step transition probabilities</h2>
+<section id="exercise" class="level2" data-number="2.3">
+<h2 data-number="2.3" class="anchored" data-anchor-id="exercise"><span class="header-section-number">2.3</span> Exercise</h2>
+<ol type="1">
+<li>Suppose there are two types of crops (Crop A and Crop B) planted in different fields, and farmers perform certain operations that may affect the composition of crops in each field. After each agricultural season, a random selection of crops from one field is transferred to the other. Let <span class="math inline">\(X_t\)</span> denote the number of Crop A plants in the first field after the <span class="math inline">\(t\)</span>th season. What are the parameter space and state space for this agricultural scenario, and can <span class="math inline">\(\{X\_t\}\)</span> be considered a Markov chain given certain conditions on the planting and transfer processes?</li>
+</ol>
 </section>
-<section id="chapman-kolmogorov-equations" class="level2" data-number="2.4">
-<h2 data-number="2.4" class="anchored" data-anchor-id="chapman-kolmogorov-equations"><span class="header-section-number">2.4</span> Chapman-Kolmogorov equations</h2>
+<section id="one-step-transition-probability-matrix" class="level2" data-number="2.4">
+<h2 data-number="2.4" class="anchored" data-anchor-id="one-step-transition-probability-matrix"><span class="header-section-number">2.4</span> One-step transition probability matrix</h2>
+<p>Let <span class="math inline">\(P\)</span> denote the matrix of one-step transition probabilities <span class="math inline">\(P_{ij}\)</span>, so that</p>
+<p><span class="math display">\[P = \left[\begin{array}{cccccccc}
+p_{00} &amp; p_{01} &amp; p_{02} &amp; ...\\
+p_{10} &amp; p_{11} &amp; p_{12} &amp; ...\\
+. &amp; . &amp; . &amp; ...\\
+p_{i0} &amp; p_{i1} &amp; p_{i2} &amp; ...\\
+. &amp; . &amp; . &amp; ...
+\end{array}\right]\]</span></p>
+<p>Since probabilities are nonnegative and since the process must make a transition into some state, we have</p>
+<p><span class="math inline">\(p_{ij} \geq 0,\)</span> for <span class="math inline">\(i, j \geq 0\)</span>, <span class="math inline">\(\sum_{j=0}^\infty p_{ij} = 1,\)</span> for <span class="math inline">\(i = 0, 1, ...\)</span></p>
 </section>
 <section id="higher-n-step-transition-probabilities" class="level2" data-number="2.5">
 <h2 data-number="2.5" class="anchored" data-anchor-id="higher-n-step-transition-probabilities"><span class="header-section-number">2.5</span> Higher (n-step) transition probabilities</h2>
+<p><span class="math inline">\(P_{ij}\)</span> - One step transition probabilities</p>
+<p><span class="math inline">\(P^n_{ij}\)</span> - n - step transition probabilities</p>
+<p>Probability that a process in state <span class="math inline">\(i\)</span> will be in state <span class="math inline">\(j\)</span> after <span class="math inline">\(n\)</span> additional transitions. That is,</p>
+<p><span class="math display">\[P^n_{ij}=P(X_{n+k}=j|X_k=i), \text{ } n\geq 0, \text{ }i, j \geq 0.\]</span></p>
 </section>
-<section id="classification-of-states" class="level2" data-number="2.6">
-<h2 data-number="2.6" class="anchored" data-anchor-id="classification-of-states"><span class="header-section-number">2.6</span> Classification of states</h2>
+<section id="chapman-kolmogorov-equations" class="level2" data-number="2.6">
+<h2 data-number="2.6" class="anchored" data-anchor-id="chapman-kolmogorov-equations"><span class="header-section-number">2.6</span> Chapman-Kolmogorov equations</h2>
+<p><span class="math display">\[P_{ij}^{n+m}=\sum_{k=0}^{\infty}P_{ik}^nP_{kj}^m\text{ for all n, m} \geq 0, \text{ all i, j,}\]</span> where, <span class="math inline">\(P^n_{ik}P^m_{kj}\)</span> represents the probability that starting in <span class="math inline">\(i\)</span> the process will go to state <span class="math inline">\(j\)</span> in <span class="math inline">\(n+m\)</span> with an intermediate stop in state <span class="math inline">\(k\)</span> after <span class="math inline">\(n\)</span> steps.</p>
+<p>This can be used to compute <span class="math inline">\(n\)</span>-step transition probabilities</p>
 </section>
-<section id="limiting-probabilities" class="level2" data-number="2.7">
-<h2 data-number="2.7" class="anchored" data-anchor-id="limiting-probabilities"><span class="header-section-number">2.7</span> Limiting probabilities</h2>
+<section id="exercise-1" class="level2" data-number="2.7">
+<h2 data-number="2.7" class="anchored" data-anchor-id="exercise-1"><span class="header-section-number">2.7</span> Exercise</h2>
+<ol type="1">
+<li>Show that <span class="math inline">\(P_{ij}^{n+m}=\sum_{k=0}^{\infty}P_{ik}^nP_{kj}^m\text{ for all n, m} \geq 0, \text{ all i, j.}\)</span></li>
+</ol>
 </section>
-<section id="applications" class="level2" data-number="2.8">
-<h2 data-number="2.8" class="anchored" data-anchor-id="applications"><span class="header-section-number">2.8</span> Applications</h2>
+<section id="n---step-transition-matrix" class="level2" data-number="2.8">
+<h2 data-number="2.8" class="anchored" data-anchor-id="n---step-transition-matrix"><span class="header-section-number">2.8</span> <span class="math inline">\(n\)</span> - step transition matrix</h2>
+<p>The n-step transition matrix is</p>
+<p><span class="math display">\[\mathbf{P}^{(n)} = \left[\begin{array}
+{rrrr}
+P_{00}^{(n)} &amp; P_{01}^{(n)} &amp; P_{02}^{(n)} &amp; ...\\
+P_{10}^{(n)} &amp; P_{11}^{(n)} &amp; P_{12}^{(n)} &amp; ...\\
+. &amp; .  &amp; . &amp; ...\\
+. &amp; .  &amp; . &amp; ...\\
+. &amp; .  &amp; . &amp; ...\\
+\end{array}\right]
+\]</span> The Chapman-Kolmogrov equations imply</p>
+<p><span class="math display">\[\mathbf{P}^{(n+m)}=P^{(n)}P^{(m)}.\]</span></p>
+<p>In particular,</p>
+<p><span class="math display">\[\mathbf{P}^{(2)}=\mathbf{P}^{(1)}\mathbf{P}^{(1)}=\mathbf{P}\mathbf{P}=\mathbf{P}^2.\]</span> By induction,</p>
+<p><span class="math display">\[\mathbf{P}^{(n)}=\mathbf{P}^{(n-1+1)}=\mathbf{P}^{n-1}\mathbf{P}=\mathbf{P}^n.\]</span></p>
+</section>
+<section id="n---step-transition-matrix-1" class="level2" data-number="2.9">
+<h2 data-number="2.9" class="anchored" data-anchor-id="n---step-transition-matrix-1"><span class="header-section-number">2.9</span> <span class="math inline">\(n\)</span> - step transition matrix</h2>
+<p><strong>Proposition</strong></p>
+<p><span class="math display">\[P^{(n)} = P^n = P \times P \times P \times ... \times P, \text{ } n \geq 1.\]</span> That is, <span class="math inline">\(P^{(n)}\)</span> is equal to <span class="math inline">\(P\)</span> multiplied by itself <span class="math inline">\(n\)</span> times.</p>
+</section>
+<section id="classification-of-states" class="level2" data-number="2.10">
+<h2 data-number="2.10" class="anchored" data-anchor-id="classification-of-states"><span class="header-section-number">2.10</span> Classification of states</h2>
+</section>
+<section id="limiting-probabilities" class="level2" data-number="2.11">
+<h2 data-number="2.11" class="anchored" data-anchor-id="limiting-probabilities"><span class="header-section-number">2.11</span> Limiting probabilities</h2>
+</section>
+<section id="applications" class="level2" data-number="2.12">
+<h2 data-number="2.12" class="anchored" data-anchor-id="applications"><span class="header-section-number">2.12</span> Applications</h2>
 
 
 </section>
@@ -213,9 +294,23 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     icon: icon
   };
   anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
   const clipboard = new window.ClipboardJS('.code-copy-button', {
-    target: function(trigger) {
-      return trigger.previousElementSibling;
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
     }
   });
   clipboard.on('success', function(e) {
@@ -280,6 +375,92 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       return note.innerHTML;
     });
   }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
   const findCites = (el) => {
     const parentEl = el.parentElement;
     if (parentEl) {

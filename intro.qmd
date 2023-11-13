@@ -223,7 +223,7 @@ ggplot(data=df, aes(x=t, y=xt)) +
 
 ```
 
-The answer is "No". The reason is when you observe the above R-code you can see the values are generated based on the function $sin(2\pit)$. Hence, there is no randomness associated with he random variables. This type of process is called a deterministic process. 
+The answer is "No". The reason is when you observe the above R-code you can see the values are generated based on the function $\sin(2 \pi t)$. Hence, there is no randomness associated with he random variables. This type of process is called a deterministic process. 
 
   
 ## Stationary condition of a stochastic process
@@ -234,13 +234,9 @@ The answer is "No". The reason is when you observe the above R-code you can see 
 
 ## Stationary increments condition of a stochastic process
 
-## Stochastic process vs a deterministic process   
 
-## Stochastic proceses vs Time series
+ 
 
-Realization
-
-multiple realizations of a stochastic process.
 
 ## Stochastic processes vs probaility calculation in a single random variable
 
