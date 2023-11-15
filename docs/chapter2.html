@@ -143,7 +143,10 @@ ul.task-list li input[type="checkbox"] {
   <ul>
   <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction"><span class="header-section-number">2.1</span> Introduction</a></li>
   <li><a href="#one-step-transition-probabilities" id="toc-one-step-transition-probabilities" class="nav-link" data-scroll-target="#one-step-transition-probabilities"><span class="header-section-number">2.2</span> One-step transition probabilities</a></li>
-  <li><a href="#time-homogeneous-discrete-parameter-markov-chain" id="toc-time-homogeneous-discrete-parameter-markov-chain" class="nav-link" data-scroll-target="#time-homogeneous-discrete-parameter-markov-chain"><span class="header-section-number">2.3</span> Time Homogeneous Discrete-Parameter Markov Chain</a></li>
+  <li><a href="#time-homogeneous-discrete-parameter-markov-chain" id="toc-time-homogeneous-discrete-parameter-markov-chain" class="nav-link" data-scroll-target="#time-homogeneous-discrete-parameter-markov-chain"><span class="header-section-number">2.3</span> Time Homogeneous Discrete-Parameter Markov Chain</a>
+  <ul class="collapse">
+  <li><a href="#intuition-behind-time-homogenous-markov-chain-process" id="toc-intuition-behind-time-homogenous-markov-chain-process" class="nav-link" data-scroll-target="#intuition-behind-time-homogenous-markov-chain-process"><span class="header-section-number">2.3.1</span> Intuition behind time-homogenous Markov chain process</a></li>
+  </ul></li>
   <li><a href="#exercise" id="toc-exercise" class="nav-link" data-scroll-target="#exercise"><span class="header-section-number">2.4</span> Exercise</a></li>
   <li><a href="#one-step-transition-probability-matrix" id="toc-one-step-transition-probability-matrix" class="nav-link" data-scroll-target="#one-step-transition-probability-matrix"><span class="header-section-number">2.5</span> One-step transition probability matrix</a></li>
   <li><a href="#higher-n-step-transition-probabilities" id="toc-higher-n-step-transition-probabilities" class="nav-link" data-scroll-target="#higher-n-step-transition-probabilities"><span class="header-section-number">2.6</span> Higher (n-step) transition probabilities</a></li>
@@ -199,11 +202,31 @@ $X_0, X_1,...X_{n-1}$ and the **present state** $X_n$, is independent of the pas
 <section id="time-homogeneous-discrete-parameter-markov-chain" class="level2" data-number="2.3">
 <h2 data-number="2.3" class="anchored" data-anchor-id="time-homogeneous-discrete-parameter-markov-chain"><span class="header-section-number">2.3</span> Time Homogeneous Discrete-Parameter Markov Chain</h2>
 <p>If the conditional probability <span class="math inline">\(P(X_{n+1}=j|X_n=i)\)</span> does not depend on <span class="math inline">\(n\)</span>, then the process is known as time homogeneous Markov chain process or stationary Markov chain process. Then we can write the conditional probability <span class="math inline">\(p_{nij}\)</span> as <span class="math inline">\(P_{i,j}\)</span>. Moreover, when there is no risk of confusion, we can write <span class="math inline">\(P_{i,j}\)</span> simply as <span class="math inline">\(P_{ij}\)</span>.</p>
+<section id="intuition-behind-time-homogenous-markov-chain-process" class="level3" data-number="2.3.1">
+<h3 data-number="2.3.1" class="anchored" data-anchor-id="intuition-behind-time-homogenous-markov-chain-process"><span class="header-section-number">2.3.1</span> Intuition behind time-homogenous Markov chain process</h3>
+<p><strong>Example 1:</strong></p>
+<p>Suppose we observe the condition of crop’s soil moisture on every morning. We record the conditions as dry, normal and wet. Let’s denote the states as follows:</p>
+<ul>
+<li><p>state 0: dry</p></li>
+<li><p>state 1: normal</p></li>
+<li><p>state 2: wet</p></li>
+</ul>
+<p>Let’s assume that the soil moisture condition on a given day depends only on the moisture condition of the previous day. Furthermore, in this case conditional probability <span class="math inline">\(P(X_{n+1}=j|X_n=i)\)</span> actually depend on <span class="math inline">\(n\)</span>. The probability of moving wet to wet <span class="math inline">\(P(X_{n+1}=2|X_n=2)\)</span> is not same for the whole year. This probability is small during the dry season and very high during the rainy season. If you are living in a country with four seasons, then this probability will vary according to the seasons: winter, summer, spring, and autumn. Hence, this is a non-stationary discrete-parameter discrete-state space Markov chain process. We can use a stationary Markov chain only for a short period of time.</p>
+<p>In this book we only consider time-homogeneous Markov chain processes.</p>
+<p><strong>Example 2</strong></p>
+<p>Let’s consider modeling the mood of a person as a time-homogeneous Markov chain with three states:</p>
+<ul>
+<li><p>state 0: happy</p></li>
+<li><p>state 1: neutral</p></li>
+<li><p>state 2: sad</p></li>
+</ul>
+<p>Here is the time</p>
+</section>
 </section>
 <section id="exercise" class="level2" data-number="2.4">
 <h2 data-number="2.4" class="anchored" data-anchor-id="exercise"><span class="header-section-number">2.4</span> Exercise</h2>
 <ol type="1">
-<li>Suppose there are two types of crops (Crop A and Crop B) planted in different fields, and farmers perform certain operations that may affect the composition of crops in each field. After each agricultural season, a random selection of crops from one field is transferred to the other. Let <span class="math inline">\(X_t\)</span> denote the number of Crop A plants in the first field after the <span class="math inline">\(t\)</span>th season. What are the parameter space and state space for this agricultural scenario, and can <span class="math inline">\(\{X\_t\}\)</span> be considered a Markov chain given certain conditions on the planting and transfer processes?</li>
+<li>Suppose there are two types of crops (Crop A and Crop B) planted in different fields, and farmers perform certain operations that may affect the composition of crops in each field. After each agricultural season, a random selection of crops from one field is transferred to the other. Let <span class="math inline">\(X\_t\)</span> denote the number of Crop A plants in the first field after the <span class="math inline">\(t\)</span>th season. What are the parameter space and state space for this agricultural scenario, and can <span class="math inline">\(\{X\_t\}\)</span> be considered a Markov chain given certain conditions on the planting and transfer processes?</li>
 </ol>
 </section>
 <section id="one-step-transition-probability-matrix" class="level2" data-number="2.5">

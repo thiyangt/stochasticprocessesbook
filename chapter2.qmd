@@ -40,23 +40,50 @@ The probabilities $p_{nij}$ are called one-step transition probabilities.
 
 If the conditional probability $P(X_{n+1}=j|X_n=i)$ does not depend on $n$, then the process is known as time homogeneous Markov chain process or stationary Markov chain process. Then we can write the conditional probability $p_{nij}$ as $P_{i,j}$. Moreover, when there is no risk of confusion, 
 we can write $P_{i,j}$ simply as $P_{ij}$. 
+
+
 ### Intuition behind time-homogenous Markov chain process
+
+**Example 1:**
 
 Suppose we observe the condition of crop's soil moisture on every morning. We record the conditions as dry, normal and wet. Let's denote the states as follows:
 
-- State 0: dry 
+- state 0: dry 
 
 - state 1: normal 
 
 - state 2: wet
 
-Let's assume that the soil moisture condition on a given day depends only on the moisture condition of the previous day. In this case conditional probability $P(X_{n+1}=j|X_n=i)$ actually depend on $n$. The probability of moving wet to wet ($P(X_{n+1}=2|X_n=2)$) is not same for the whole year. This probability is small during the dry season and very high during the rainy season. If you are living in a country with four seasons then this probability vary according to the seasons winter, summer, spring and autumn. Hence, this is a non-stationary discrete-parameter discrete-state space Markov chain process. We can use stationary Markov chain only for a short period of time. 
+Let's assume that the soil moisture condition on a given day depends only on the moisture condition of the previous day. Furthermore, in this case conditional probability $P(X_{n+1}=j|X_n=i)$ actually depend on $n$. The probability of moving wet to wet $P(X_{n+1}=2|X_n=2)$ is not same for the whole year. This probability is small during the dry season and very high during the rainy season. If you are living in a country with four seasons, then this probability will vary according to the seasons: winter, summer, spring, and autumn. Hence, this is a non-stationary discrete-parameter discrete-state space Markov chain process. We can use a stationary Markov chain only for a short period of time. 
 
 In this book we only consider time-homogeneous Markov chain processes.
 
+
+**Example 2**
+
+Let's consider modeling the mood of a person as a time-homogeneous Markov chain with three states: 
+
+- state 0: happy
+
+- state 1: neutral
+
+- state 2: sad
+
+Here is the time homogeneous transition probability matrix 
+
+$$P = \left[\begin{array}{cccccccc}
+p_{00} & p_{01} & p_{02} & ...\\
+p_{10} & p_{11} & p_{12} & ...\\
+. & . & . & ...\\
+p_{i0} & p_{i1} & p_{i2} & ...\\
+. & . & . & ...
+\end{array}\right]$$
+
+
+
 ## Exercise 
 
-1. Suppose there are two types of crops (Crop A and Crop B) planted in different fields, and farmers perform certain operations that may affect the composition of crops in each field. After each agricultural season, a random selection of crops from one field is transferred to the other. Let $X_t$ denote the number of Crop A plants in the first field after the $t$th season. What are the parameter space and state space for this agricultural scenario, and can $\{X\_t\}$ be considered a Markov chain given certain conditions on the planting and transfer processes?
+1. Suppose there are two types of crops (Crop A and Crop B) planted in different fields, and farmers perform certain operations that may affect the composition of crops in each field. After each agricultural season, a random selection of crops from one field is transferred to the other. Let $X\_t$ denote the number of Crop A plants in the first field after the $t$th season. What are the parameter space and state space for this agricultural scenario, and can $\{X\_t\}$ be considered a Markov chain given certain conditions on the planting and transfer processes?
 
 ## One-step transition probability matrix
 
