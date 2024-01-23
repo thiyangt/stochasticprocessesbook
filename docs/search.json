@@ -248,8 +248,8 @@
     "objectID": "chapter5.html#special-cases",
     "href": "chapter5.html#special-cases",
     "title": "3  Birth Process, Death Process and Birth-Death Process.",
-    "section": "3.5 Special cases",
-    "text": "3.5 Special cases\n\nWhen all \\(\\mu_i = 0\\), called a pure birth process.\nWhen all \\(\\lambda_i = 0\\) called a pure death process\nWhen \\(\\lambda_n = n\\lambda\\) and \\(\\mu_n = n\\lambda\\) is a linear birth and death process.\nWhen \\(\\lambda_n = \\lambda\\) and \\(\\mu_n = 0\\) is called a Poisson process."
+    "section": "3.6 Special cases",
+    "text": "3.6 Special cases\n\nWhen all \\(\\mu_i = 0\\), called a pure birth process.\nWhen all \\(\\lambda_i = 0\\) called a pure death process\nWhen \\(\\lambda_n = n\\lambda\\) and \\(\\mu_n = n\\lambda\\) is a linear birth and death process.\nWhen \\(\\lambda_n = \\lambda\\) and \\(\\mu_n = 0\\) is called a Poisson process."
   },
   {
     "objectID": "chapter5.html#instantaneous-birth-rate-and-instantaneous-death-rate",
@@ -263,6 +263,20 @@
     "href": "chapter5.html#postulates",
     "title": "3  Birth Process, Death Process and Birth-Death Process.",
     "section": "3.4 Postulates",
-    "text": "3.4 Postulates\nLet \\[P_{ij}(t) = P(N(t+s) = j|N(s) = i)\\text{ for all }s \\geq 0,\\]\nFurther, \\(P_{ij}(t)\\) satisfy,\n\n\\(P_{i, i+1}(h) = \\lambda_ih + o(h), i \\geq 0\\)\n\\(P_{i, i-1}(h) = \\mu_ih + o(h), i \\geq 1\\)\n\\(P_{i, i-1}(h) = 1- (\\lambda_i + \\mu_i)h + o(h), i \\geq 0\\)\n\\(P_{ii}(0) = \\delta_{ij}\\)\n\\(\\mu_0 = 0, \\lambda_0 &gt; 0, \\mu_i, \\lambda_i &gt; 0, i=1, 2, 3,,,,\\)"
+    "text": "3.4 Postulates\nLet \\[P_{ij}(h) = P(N(t+h) = j|N(t) = i)\\text{ for all }t \\geq 0,\\]\nFurther, \\(P_{ij}(t)\\) satisfy,\n\n\\(P_{i, i+1}(h) = P(N(t+h) = i+1|N(t)=i) = \\lambda_ih + o(h), i \\geq 0\\)\n\\(P_{i, i-1}(h)=P(N(t+h) = i-1|N(t)=i) = \\mu_ih + o(h), i \\geq 1\\)\n\\(P_{i, i}(h)= P(N(t+h) = i|N(t)=i) = 1- (\\lambda_i + \\mu_i)h + o(h), i \\geq 0\\)\n\\(P(N(t+h) = i+m|N(t)=i) = o(h), |m| &gt; 1\\)\n\\(\\mu_0 = 0, \\lambda_0 &gt; 0, \\mu_i, \\lambda_i &gt; 0, i=1, 2, 3,,,,\\)"
+  },
+  {
+    "objectID": "chapter5.html#exercise",
+    "href": "chapter5.html#exercise",
+    "title": "3  Birth Process, Death Process and Birth-Death Process.",
+    "section": "3.5 Exercise",
+    "text": "3.5 Exercise\nShow that the birth process, death process and birth-death process are Markov processes"
+  },
+  {
+    "objectID": "chapter5.html#exercise-1",
+    "href": "chapter5.html#exercise-1",
+    "title": "3  Birth Process, Death Process and Birth-Death Process.",
+    "section": "3.7 Exercise",
+    "text": "3.7 Exercise\nDerive the distribution of length of stay (elapsed time between two consecutive occurrences ) for a birth, death and birth-death process."
   }
 ]

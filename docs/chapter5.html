@@ -151,7 +151,9 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#definition-transition-probability" id="toc-definition-transition-probability" class="nav-link" data-scroll-target="#definition-transition-probability"><span class="header-section-number">3.2</span> Definition: Transition Probability</a></li>
   <li><a href="#instantaneous-birth-rate-and-instantaneous-death-rate" id="toc-instantaneous-birth-rate-and-instantaneous-death-rate" class="nav-link" data-scroll-target="#instantaneous-birth-rate-and-instantaneous-death-rate"><span class="header-section-number">3.3</span> Instantaneous birth rate and instantaneous death rate</a></li>
   <li><a href="#postulates" id="toc-postulates" class="nav-link" data-scroll-target="#postulates"><span class="header-section-number">3.4</span> Postulates</a></li>
-  <li><a href="#special-cases" id="toc-special-cases" class="nav-link" data-scroll-target="#special-cases"><span class="header-section-number">3.5</span> Special cases</a></li>
+  <li><a href="#exercise" id="toc-exercise" class="nav-link" data-scroll-target="#exercise"><span class="header-section-number">3.5</span> Exercise</a></li>
+  <li><a href="#special-cases" id="toc-special-cases" class="nav-link" data-scroll-target="#special-cases"><span class="header-section-number">3.6</span> Special cases</a></li>
+  <li><a href="#exercise-1" id="toc-exercise-1" class="nav-link" data-scroll-target="#exercise-1"><span class="header-section-number">3.7</span> Exercise</a></li>
   </ul>
 </nav>
     </div>
@@ -210,24 +212,32 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="postulates" class="level2" data-number="3.4">
 <h2 data-number="3.4" class="anchored" data-anchor-id="postulates"><span class="header-section-number">3.4</span> Postulates</h2>
-<p>Let <span class="math display">\[P_{ij}(t) = P(N(t+s) = j|N(s) = i)\text{ for all }s \geq 0,\]</span></p>
+<p>Let <span class="math display">\[P_{ij}(h) = P(N(t+h) = j|N(t) = i)\text{ for all }t \geq 0,\]</span></p>
 <p>Further, <span class="math inline">\(P_{ij}(t)\)</span> satisfy,</p>
 <ol type="1">
-<li><p><span class="math inline">\(P_{i, i+1}(h) = \lambda_ih + o(h), i \geq 0\)</span></p></li>
-<li><p><span class="math inline">\(P_{i, i-1}(h) = \mu_ih + o(h), i \geq 1\)</span></p></li>
-<li><p><span class="math inline">\(P_{i, i-1}(h) = 1- (\lambda_i + \mu_i)h + o(h), i \geq 0\)</span></p></li>
-<li><p><span class="math inline">\(P_{ii}(0) = \delta_{ij}\)</span></p></li>
+<li><p><span class="math inline">\(P_{i, i+1}(h) = P(N(t+h) = i+1|N(t)=i) = \lambda_ih + o(h), i \geq 0\)</span></p></li>
+<li><p><span class="math inline">\(P_{i, i-1}(h)=P(N(t+h) = i-1|N(t)=i) = \mu_ih + o(h), i \geq 1\)</span></p></li>
+<li><p><span class="math inline">\(P_{i, i}(h)= P(N(t+h) = i|N(t)=i) = 1- (\lambda_i + \mu_i)h + o(h), i \geq 0\)</span></p></li>
+<li><p><span class="math inline">\(P(N(t+h) = i+m|N(t)=i) = o(h), |m| &gt; 1\)</span></p></li>
 <li><p><span class="math inline">\(\mu_0 = 0, \lambda_0 &gt; 0, \mu_i, \lambda_i &gt; 0, i=1, 2, 3,,,,\)</span></p></li>
 </ol>
 </section>
-<section id="special-cases" class="level2" data-number="3.5">
-<h2 data-number="3.5" class="anchored" data-anchor-id="special-cases"><span class="header-section-number">3.5</span> Special cases</h2>
+<section id="exercise" class="level2" data-number="3.5">
+<h2 data-number="3.5" class="anchored" data-anchor-id="exercise"><span class="header-section-number">3.5</span> Exercise</h2>
+<p>Show that the birth process, death process and birth-death process are Markov processes</p>
+</section>
+<section id="special-cases" class="level2" data-number="3.6">
+<h2 data-number="3.6" class="anchored" data-anchor-id="special-cases"><span class="header-section-number">3.6</span> Special cases</h2>
 <ol type="1">
 <li><p>When all <span class="math inline">\(\mu_i = 0\)</span>, called a pure birth process.</p></li>
 <li><p>When all <span class="math inline">\(\lambda_i = 0\)</span> called a pure death process</p></li>
 <li><p>When <span class="math inline">\(\lambda_n = n\lambda\)</span> and <span class="math inline">\(\mu_n = n\lambda\)</span> is a linear birth and death process.</p></li>
 <li><p>When <span class="math inline">\(\lambda_n = \lambda\)</span> and <span class="math inline">\(\mu_n = 0\)</span> is called a Poisson process.</p></li>
 </ol>
+</section>
+<section id="exercise-1" class="level2" data-number="3.7">
+<h2 data-number="3.7" class="anchored" data-anchor-id="exercise-1"><span class="header-section-number">3.7</span> Exercise</h2>
+<p>Derive the distribution of length of stay (elapsed time between two consecutive occurrences ) for a birth, death and birth-death process.</p>
 
 
 </section>
