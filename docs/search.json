@@ -163,7 +163,7 @@
   {
     "objectID": "summary.html",
     "href": "summary.html",
-    "title": "3  Summary",
+    "title": "4  Summary",
     "section": "",
     "text": "In summary, this book has no content whatsoever."
   },
@@ -229,5 +229,40 @@
     "title": "2  Discrete Parameter Markov Chains",
     "section": "2.3 Time Homogeneous Discrete-Parameter Markov Chain",
     "text": "2.3 Time Homogeneous Discrete-Parameter Markov Chain\nIf the conditional probability \\(P(X_{n+1}=j|X_n=i)\\) does not depend on \\(n\\), then the process is known as time homogeneous Markov chain process or stationary Markov chain process. Then we can write the conditional probability \\(p_{nij}\\) as \\(P_{i,j}\\). Moreover, when there is no risk of confusion, we can write \\(P_{i,j}\\) simply as \\(P_{ij}\\).\n\n2.3.1 Intuition behind time-homogenous Markov chain process\nExample 1:\nSuppose we observe the condition of crop’s soil moisture on every morning. We record the conditions as dry, normal and wet. Let’s denote the states as follows:\n\nstate 0: dry\nstate 1: normal\nstate 2: wet\n\nLet’s assume that the soil moisture condition on a given day depends only on the moisture condition of the previous day. Furthermore, in this case conditional probability \\(P(X_{n+1}=j|X_n=i)\\) actually depend on \\(n\\). The probability of moving wet to wet \\(P(X_{n+1}=2|X_n=2)\\) is not same for the whole year. This probability is small during the dry season and very high during the rainy season. If you are living in a country with four seasons, then this probability will vary according to the seasons: winter, summer, spring, and autumn. Hence, this is a non-stationary discrete-parameter discrete-state space Markov chain process. We can use a stationary Markov chain only for a short period of time.\nIn this book we only consider time-homogeneous Markov chain processes.\nExample 2\nLet’s consider modeling the mood of a person as a time-homogeneous Markov chain with three states:\n\nstate 0: happy\nstate 1: neutral\nstate 2: sad\n\nHere is the time"
+  },
+  {
+    "objectID": "chapter5.html#applications-of-birth-death-process",
+    "href": "chapter5.html#applications-of-birth-death-process",
+    "title": "3  Birth Process, Death Process and Birth-Death Process.",
+    "section": "3.1 Applications of Birth-Death Process",
+    "text": "3.1 Applications of Birth-Death Process\n\nGenetics, epidemiology: Study of infectious diseases, birth-death processes can be employed to model the spread of infections within a population\nEcology: model the birth and death rates of different species in a habitat\nEpidemiology: model number of infected individuals"
+  },
+  {
+    "objectID": "chapter5.html#definition-transition-probability",
+    "href": "chapter5.html#definition-transition-probability",
+    "title": "3  Birth Process, Death Process and Birth-Death Process.",
+    "section": "3.2 Definition: Transition Probability",
+    "text": "3.2 Definition: Transition Probability\n\nLet \\(N(t)\\) be the number of individuals at arbitrary time \\(t\\) for \\(t \\geq 0\\) and \\(\\{N(t): t \\geq 0\\}\\) be the sequence of random variables which define a birth-death Markov chain with a birth rate \\(\\lambda_i\\) and death rate \\(\\mu_i\\) for state \\(i\\). Assume that an arbitrary community with \\(r\\) individuals, thus \\(N(0) = r\\) for some \\(r &gt; 0\\).\nThe stationary transition probability is defined as follows:\n\\[P_{ij}(t) = P\\{N(s+t) = j|N(s) = i\\} \\text{ for all } s \\text{and } t&gt;0\\]"
+  },
+  {
+    "objectID": "chapter5.html#special-cases",
+    "href": "chapter5.html#special-cases",
+    "title": "3  Birth Process, Death Process and Birth-Death Process.",
+    "section": "3.5 Special cases",
+    "text": "3.5 Special cases\n\nWhen all \\(\\mu_i = 0\\), called a pure birth process.\nWhen all \\(\\lambda_i = 0\\) called a pure death process\nWhen \\(\\lambda_n = n\\lambda\\) and \\(\\mu_n = n\\lambda\\) is a linear birth and death process.\nWhen \\(\\lambda_n = \\lambda\\) and \\(\\mu_n = 0\\) is called a Poisson process."
+  },
+  {
+    "objectID": "chapter5.html#instantaneous-birth-rate-and-instantaneous-death-rate",
+    "href": "chapter5.html#instantaneous-birth-rate-and-instantaneous-death-rate",
+    "title": "3  Birth Process, Death Process and Birth-Death Process.",
+    "section": "3.3 Instantaneous birth rate and instantaneous death rate",
+    "text": "3.3 Instantaneous birth rate and instantaneous death rate\nConsider a population of \\(N(t)\\) individuals. Suppose in next time interval \\((t, t+h)\\) probability of population increase of 1 (called a birth) is \\(\\lambda_ih + o(h)\\) and probability of decrease of 1 (death) is \\(\\mu_ih + o(h)\\). Here \\(\\lambda_i\\) is called the instantaneous birth rate and \\(\\mu_i\\) is called instantaneous death rate."
+  },
+  {
+    "objectID": "chapter5.html#postulates",
+    "href": "chapter5.html#postulates",
+    "title": "3  Birth Process, Death Process and Birth-Death Process.",
+    "section": "3.4 Postulates",
+    "text": "3.4 Postulates\nLet \\[P_{ij}(t) = P(N(t+s) = j|N(s) = i)\\text{ for all }s \\geq 0,\\]\nFurther, \\(P_{ij}(t)\\) satisfy,\n\n\\(P_{i, i+1}(h) = \\lambda_ih + o(h), i \\geq 0\\)\n\\(P_{i, i-1}(h) = \\mu_ih + o(h), i \\geq 1\\)\n\\(P_{i, i-1}(h) = 1- (\\lambda_i + \\mu_i)h + o(h), i \\geq 0\\)\n\\(P_{ii}(0) = \\delta_{ij}\\)\n\\(\\mu_0 = 0, \\lambda_0 &gt; 0, \\mu_i, \\lambda_i &gt; 0, i=1, 2, 3,,,,\\)"
   }
 ]

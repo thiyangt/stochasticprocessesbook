@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Introduction to Stochastic Processes - References</title>
+<title>Introduction to Stochastic Processes - 3&nbsp; Birth Process, Death Process and Birth-Death Process.</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,26 +20,7 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for citations */
-div.csl-bib-body { }
-div.csl-entry {
-  clear: both;
-}
-.hanging-indent div.csl-entry {
-  margin-left:2em;
-  text-indent:-2em;
-}
-div.csl-left-margin {
-  min-width:2em;
-  float:left;
-}
-div.csl-right-inline {
-  margin-left:2em;
-  padding-left:1em;
-}
-div.csl-indent {
-  margin-left: 2em;
-}</style>
+</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -49,7 +30,8 @@ div.csl-indent {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./summary.html" rel="prev">
+<link href="./summary.html" rel="next">
+<link href="./chapter2.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -80,6 +62,8 @@ div.csl-indent {
   }
 }</script>
 
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 </head>
 
@@ -92,7 +76,7 @@ div.csl-indent {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./references.html">References</a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./chapter5.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Birth Process, Death Process and Birth-Death Process.</span></a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -137,7 +121,7 @@ div.csl-indent {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./chapter5.html" class="sidebar-item-text sidebar-link">
+  <a href="./chapter5.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Birth Process, Death Process and Birth-Death Process.</span></span></a>
   </div>
 </li>
@@ -149,7 +133,7 @@ div.csl-indent {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./references.html" class="sidebar-item-text sidebar-link active">
+  <a href="./references.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">References</span></a>
   </div>
 </li>
@@ -159,14 +143,24 @@ div.csl-indent {
 <div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#applications-of-birth-death-process" id="toc-applications-of-birth-death-process" class="nav-link active" data-scroll-target="#applications-of-birth-death-process"><span class="header-section-number">3.1</span> Applications of Birth-Death Process</a></li>
+  <li><a href="#definition-transition-probability" id="toc-definition-transition-probability" class="nav-link" data-scroll-target="#definition-transition-probability"><span class="header-section-number">3.2</span> Definition: Transition Probability</a></li>
+  <li><a href="#instantaneous-birth-rate-and-instantaneous-death-rate" id="toc-instantaneous-birth-rate-and-instantaneous-death-rate" class="nav-link" data-scroll-target="#instantaneous-birth-rate-and-instantaneous-death-rate"><span class="header-section-number">3.3</span> Instantaneous birth rate and instantaneous death rate</a></li>
+  <li><a href="#postulates" id="toc-postulates" class="nav-link" data-scroll-target="#postulates"><span class="header-section-number">3.4</span> Postulates</a></li>
+  <li><a href="#special-cases" id="toc-special-cases" class="nav-link" data-scroll-target="#special-cases"><span class="header-section-number">3.5</span> Special cases</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">References</h1>
+<h1 class="title"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Birth Process, Death Process and Birth-Death Process.</span></h1>
 </div>
 
 
@@ -181,10 +175,53 @@ div.csl-indent {
 
 </header>
 
+<ul>
+<li><p>A birth-death process is a continuous-time Markov chain used to describe the evolution of the system by counting the number of individuals in the system over time.</p></li>
+<li><p>In this dynamic system, each individual has the potential to either give birth to a new individual or undergo a death event.</p></li>
+<li><p>The rates of these birth and death events at any given time depends upon the current number of existing individuals in the system.</p></li>
+</ul>
+<section id="applications-of-birth-death-process" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="applications-of-birth-death-process"><span class="header-section-number">3.1</span> Applications of Birth-Death Process</h2>
+<ul>
+<li><p>Genetics, epidemiology: Study of infectious diseases, birth-death processes can be employed to model the spread of infections within a population</p></li>
+<li><p>Ecology: model the birth and death rates of different species in a habitat</p></li>
+<li><p>Epidemiology: model number of infected individuals</p></li>
+</ul>
+</section>
+<section id="definition-transition-probability" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="definition-transition-probability"><span class="header-section-number">3.2</span> Definition: Transition Probability</h2>
+<!--https://www.sciencedirect.com/science/article/pii/S0895717711005541-->
+<p>Let <span class="math inline">\(N(t)\)</span> be the number of individuals at arbitrary time <span class="math inline">\(t\)</span> for <span class="math inline">\(t \geq 0\)</span> and <span class="math inline">\(\{N(t): t \geq 0\}\)</span> be the sequence of random variables which define a birth-death Markov chain with a birth rate <span class="math inline">\(\lambda_i\)</span> and death rate <span class="math inline">\(\mu_i\)</span> for state <span class="math inline">\(i\)</span>. Assume that an arbitrary community with <span class="math inline">\(r\)</span> individuals, thus <span class="math inline">\(N(0) = r\)</span> for some <span class="math inline">\(r &gt; 0\)</span>.</p>
+<p>The stationary transition probability is defined as follows:</p>
+<p><span class="math display">\[P_{ij}(t) = P\{N(s+t) = j|N(s) = i\} \text{ for all } s \text{and } t&gt;0\]</span></p>
+</section>
+<section id="instantaneous-birth-rate-and-instantaneous-death-rate" class="level2" data-number="3.3">
+<h2 data-number="3.3" class="anchored" data-anchor-id="instantaneous-birth-rate-and-instantaneous-death-rate"><span class="header-section-number">3.3</span> Instantaneous birth rate and instantaneous death rate</h2>
+<p>Consider a population of <span class="math inline">\(N(t)\)</span> individuals. Suppose in next time interval <span class="math inline">\((t, t+h)\)</span> probability of population increase of 1 (called a birth) is <span class="math inline">\(\lambda_ih + o(h)\)</span> and probability of decrease of 1 (death) is <span class="math inline">\(\mu_ih + o(h)\)</span>. Here <span class="math inline">\(\lambda_i\)</span> is called the instantaneous birth rate and <span class="math inline">\(\mu_i\)</span> is called instantaneous death rate.</p>
+</section>
+<section id="postulates" class="level2" data-number="3.4">
+<h2 data-number="3.4" class="anchored" data-anchor-id="postulates"><span class="header-section-number">3.4</span> Postulates</h2>
+<p>Let <span class="math display">\[P_{ij}(t) = P(N(t+s) = j|N(s) = i)\text{ for all }s \geq 0,\]</span></p>
+<p>Further, <span class="math inline">\(P_{ij}(t)\)</span> satisfy,</p>
+<ol type="1">
+<li><p><span class="math inline">\(P_{i, i+1}(h) = \lambda_ih + o(h), i \geq 0\)</span></p></li>
+<li><p><span class="math inline">\(P_{i, i-1}(h) = \mu_ih + o(h), i \geq 1\)</span></p></li>
+<li><p><span class="math inline">\(P_{i, i-1}(h) = 1- (\lambda_i + \mu_i)h + o(h), i \geq 0\)</span></p></li>
+<li><p><span class="math inline">\(P_{ii}(0) = \delta_{ij}\)</span></p></li>
+<li><p><span class="math inline">\(\mu_0 = 0, \lambda_0 &gt; 0, \mu_i, \lambda_i &gt; 0, i=1, 2, 3,,,,\)</span></p></li>
+</ol>
+</section>
+<section id="special-cases" class="level2" data-number="3.5">
+<h2 data-number="3.5" class="anchored" data-anchor-id="special-cases"><span class="header-section-number">3.5</span> Special cases</h2>
+<ol type="1">
+<li><p>When all <span class="math inline">\(\mu_i = 0\)</span>, called a pure birth process.</p></li>
+<li><p>When all <span class="math inline">\(\lambda_i = 0\)</span> called a pure death process</p></li>
+<li><p>When <span class="math inline">\(\lambda_n = n\lambda\)</span> and <span class="math inline">\(\mu_n = n\lambda\)</span> is a linear birth and death process.</p></li>
+<li><p>When <span class="math inline">\(\lambda_n = \lambda\)</span> and <span class="math inline">\(\mu_n = 0\)</span> is called a Poisson process.</p></li>
+</ol>
 
 
-
-
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -422,11 +459,14 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./summary.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Summary</span></span>
+      <a href="./chapter2.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Discrete Parameter Markov Chains</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
+      <a href="./summary.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Summary</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
   </div>
 </nav>
 </div> <!-- /content -->
