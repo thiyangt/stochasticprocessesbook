@@ -256,7 +256,7 @@
     "href": "chapter5.html#instantaneous-birth-rate-and-instantaneous-death-rate",
     "title": "3  Birth Process, Death Process and Birth-Death Process.",
     "section": "3.3 Instantaneous birth rate and instantaneous death rate",
-    "text": "3.3 Instantaneous birth rate and instantaneous death rate\nConsider a population of \\(N(t)\\) individuals. Suppose in next time interval \\((t, t+h)\\) probability of population increase of 1 (called a birth) is \\(\\lambda_ih + o(h)\\) and probability of decrease of 1 (death) is \\(\\mu_ih + o(h)\\). Here \\(\\lambda_i\\) is called the instantaneous birth rate and \\(\\mu_i\\) is called instantaneous death rate."
+    "text": "3.3 Instantaneous birth rate and instantaneous death rate\nConsider a population of \\(N(t)\\) individuals. Suppose in next time interval \\((t, t+h)\\) probability of population increase of 1 (called a birth) is \\(\\lambda_ih + o(h)\\) and probability of decrease of 1 (death) is \\(\\mu_ih + o(h)\\). Here \\(\\lambda_i\\) is called the instantaneous birth rate and \\(\\mu_i\\) is called instantaneous death rate.\nFurther, we have\n\\[\n    q_{ij}=\n\\begin{cases}\n    0,& \\text{if } |i-j|\\geq 1\\\\\n    \\lambda_i, & \\text{if } j=i+1\\\\\n    \\mu_{i},              & \\text{if } j=i-1\n\\end{cases}\n\\]"
   },
   {
     "objectID": "chapter5.html#postulates",

@@ -29,6 +29,17 @@ $$P_{ij}(t) = P\{N(s+t) = j|N(s) = i\} \text{ for all } s \text{and } t>0$$
 
 Consider a population of $N(t)$ individuals. Suppose in next time interval $(t, t+h)$ probability of population increase of 1 (called a birth) is $\lambda_ih + o(h)$ and probability of decrease of 1 (death) is $\mu_ih + o(h)$. Here $\lambda_i$ is called the instantaneous birth rate and $\mu_i$ is called instantaneous death rate.
 
+Further, we have
+
+$$
+    q_{ij}= 
+\begin{cases}
+    0,& \text{if } |i-j|\geq 1\\
+    \lambda_i, & \text{if } j=i+1\\
+    \mu_{i},              & \text{if } j=i-1
+\end{cases}
+$$
+
 
 ## Postulates
 

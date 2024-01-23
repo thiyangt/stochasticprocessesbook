@@ -198,6 +198,15 @@ ul.task-list li input[type="checkbox"] {
 <section id="instantaneous-birth-rate-and-instantaneous-death-rate" class="level2" data-number="3.3">
 <h2 data-number="3.3" class="anchored" data-anchor-id="instantaneous-birth-rate-and-instantaneous-death-rate"><span class="header-section-number">3.3</span> Instantaneous birth rate and instantaneous death rate</h2>
 <p>Consider a population of <span class="math inline">\(N(t)\)</span> individuals. Suppose in next time interval <span class="math inline">\((t, t+h)\)</span> probability of population increase of 1 (called a birth) is <span class="math inline">\(\lambda_ih + o(h)\)</span> and probability of decrease of 1 (death) is <span class="math inline">\(\mu_ih + o(h)\)</span>. Here <span class="math inline">\(\lambda_i\)</span> is called the instantaneous birth rate and <span class="math inline">\(\mu_i\)</span> is called instantaneous death rate.</p>
+<p>Further, we have</p>
+<p><span class="math display">\[
+    q_{ij}=
+\begin{cases}
+    0,&amp; \text{if } |i-j|\geq 1\\
+    \lambda_i, &amp; \text{if } j=i+1\\
+    \mu_{i},              &amp; \text{if } j=i-1
+\end{cases}
+\]</span></p>
 </section>
 <section id="postulates" class="level2" data-number="3.4">
 <h2 data-number="3.4" class="anchored" data-anchor-id="postulates"><span class="header-section-number">3.4</span> Postulates</h2>
