@@ -57,6 +57,8 @@ Further, $P_{ij}(t)$ satisfy,
 
 5. $\mu_0 = 0, \lambda_0 > 0, \mu_i, \lambda_i > 0, i=1, 2, 3,,,,$
 
+
+
 ## Exercise 
 
 Show that the birth process, death process and birth-death process  are  Markov processes
@@ -74,3 +76,29 @@ Show that the birth process, death process and birth-death process  are  Markov 
 ## Exercise
 
 Derive the distribution of length of stay (elapsed time between two consecutive occurrences ) for a birth, death and birth-death process.
+
+> Help 1
+
+**Important facts about the exponential distribution**
+
+Fact 1:..................................
+
+Fact 2:..................................
+
+Fact 3:..................................
+
+Fact 4:..................................
+
+
+> Help 2
+
+**Distribution of length of stay - Continuous parameter Markov chain processes**
+
+
+Suppose that a continuous-time time-homogeneous Markov chain $\{N(t): t \geq 0\}$ enters state $i$ at some time, (say at time $s \geq 0$)) and let $T_i$ denote the amount of time that the process stays in state $i$. Then, for any $u > 0$
+
+$$P[T_i \geq u] = P[N(t)=i; s < t < s+u|N(s)=i)]$$ for any $s \geq 0$.
+
+## Instanttaneous Probability, Transition Probability, Probability Mass Function
+
+- In-class discussion
